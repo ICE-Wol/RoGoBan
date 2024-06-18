@@ -9,7 +9,8 @@ using UnityEngine;
 public class PlayerCtrl : Block {
     public BlockType blockType;
     
-    public List<int> actionList = new List<int>();
+    public List<(int,float)> actionList = new List<(int,float)>();
+    public float tolerateTime = 2f;
     
     
     public Vector2Int[] dirVector = 
@@ -21,14 +22,19 @@ public class PlayerCtrl : Block {
     };
 
     public int GetInput() {
-        switch (Input.inputString) {
-            case "a": return 0;
-            case "s": return 1;
-            case "d": return 2;
-            case "w": return 3;
-            default: return -1;
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+            return 0;
+        } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            return 1;
+        } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+            return 2;
+        } else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            return 3;
+        } else {
+            return -1;
         }
     }
+
 
     public void Move(int dir) {
         var targetPos = pos + dirVector[dir];
@@ -82,24 +88,21 @@ public class PlayerCtrl : Block {
     
     public bool isMoving => !transform.position.Equal(tarPos,0.01f);
     private void Update() {
-        // if (Input.GetMouseButtonDown(1)) {
-        //     UndoAction();
-        // }
         
         if (isMoving) {
-            transform.position = transform.position.ApproachValue(tarPos, 16f);
+            transform.position = transform.position.ApproachValue(tarPos, 8f);
         }
         else {
             if (actionList.Count > 0) {
-                Move(actionList[0]);
+                if (Time.time - actionList[0].Item2 <= tolerateTime) {
+                    Move(actionList[0].Item1);
+                }
                 actionList.RemoveAt(0);
             }
         }
-        
+
         int dir = GetInput();
         if(dir == -1) return;
-
-        if(actionList.Count < 2) 
-            actionList.Add(dir);
+        actionList.Add((dir,Time.time));
     }
 }

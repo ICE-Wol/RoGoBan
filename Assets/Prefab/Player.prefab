@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,10 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801b60a9fce41d549ac431f0f77bc006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockType: 3
+  type: 0
+  spriteRenderer: {fileID: 7081256721624608540}
+  isTemplate: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
   pos: {x: 0, y: 0}
-  tarPosList: []
   tarPos: {x: 0, y: 0, z: 0}
+  blockType: 3
+  tolerateTime: 2
   dirVector:
   - {x: -1, y: 0}
   - {x: 0, y: -1}
@@ -98,8 +102,8 @@ SpriteRenderer:
   m_SortingLayerID: -92084317
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.92594886, a: 1}
+  m_Sprite: {fileID: -2311659948842064771, guid: 0301fd800a74818439819c6b8d1e82a8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

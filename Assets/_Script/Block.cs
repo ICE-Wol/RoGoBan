@@ -2,17 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HistoryRecord {
-    public Vector2Int pos;
-    public Color color;
-    public int time;
-    public HistoryRecord(Vector2Int pos, Color color) {
-        this.pos = pos;
-        this.color = color;
-    }
-}
 public class Block : MonoBehaviour {
     public BlockType type;
+    public SpriteRenderer spriteRenderer;
     public bool isTemplate;
     public Color color;
     /// <summary>
@@ -25,10 +17,10 @@ public class Block : MonoBehaviour {
     /// </summary>
     public Vector3 tarPos;
 
-    public List<HistoryRecord> HistoryPos;
-
-    private void Awake() {
-        HistoryPos = new List<HistoryRecord>();
+    private void Start() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if(!isTemplate)
+            spriteRenderer.color = color;
     }
 
     // public void UndoAction() {

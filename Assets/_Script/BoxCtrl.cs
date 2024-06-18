@@ -24,6 +24,7 @@ public class BoxCtrl : Block {
     
     private void Start() {
         boxList.Add(this);
+        spriteRenderer.color = ColorPicker.colorPicker.curColor;
     }
 
 

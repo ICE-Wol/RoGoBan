@@ -5,14 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Calc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Calc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Lit2DSceneTemplate.scenetemplate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Renderer2D.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Renderer2D.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Scenes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._UniversalRP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/._UniversalRP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/._URP2DSceneTemplate.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/._URP2DSceneTemplate.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/URP2DSceneTemplate.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Scenes/URP2DSceneTemplate.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +60,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/901293c591874400b128ee88bd0b265746ae00/3b/78a8feae/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ColorPicker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,6 +98,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RoGoBan/Game\RoGoBan.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\11920\Desktop\RoGoBan" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\Unity\Project\RoGoBan -debugCodeOptimization" />
@@ -115,6 +159,9 @@
       <workItem from="1718616615023" duration="158000" />
       <workItem from="1718628124605" duration="3196000" />
       <workItem from="1718631348376" duration="1025000" />
+      <workItem from="1718671693897" duration="7349000" />
+      <workItem from="1718679149377" duration="630000" />
+      <workItem from="1718692529472" duration="7023000" />
     </task>
     <servers />
   </component>

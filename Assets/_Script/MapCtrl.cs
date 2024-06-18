@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using _Scripts.Tools;
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -25,7 +26,7 @@ public class MapCtrl : MonoBehaviour {
     }
 
     public Vector2Int mapSize;
-
+    
     public SpriteRenderer gridTemplate;
     public SpriteRenderer[,] Grids;
     public Color[,] ColorTags;
@@ -56,6 +57,7 @@ public class MapCtrl : MonoBehaviour {
                 GameObject grid = Instantiate(gridTemplate.gameObject, new Vector3(x, y, 0), Quaternion.identity);
                 grid.transform.SetParent(transform);
                 Grids[x, y] = grid.GetComponent<SpriteRenderer>();
+                grid.GetComponent<Block>().pos = new Vector2Int(x, y);
             }
         }
 
@@ -74,10 +76,33 @@ public class MapCtrl : MonoBehaviour {
     }
     
     public void SetBlocksFromHistory() {
-        if (Input.GetMouseButtonDown(1)) {
-            if (HistoryList.Count == 0) return;
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            if (HistoryList.Count == 0) {
+                print("No History!");
+                return;
+            }
+            print(HistoryList.Count);
             Objects = HistoryList[^1];
             HistoryList.RemoveAt(HistoryList.Count - 1);
+            
+            // //删除上次没有但这次有的箱子（生成）
+            // for (int i = 0; i < mapSize.x; i++) {
+            //     for (int j = 0; j < mapSize.y; j++) {
+            //         if (Objects[i, j].type == BlockType.Box && oldObjects[i, j] == null) {
+            //             Destroy(Objects[i, j].gameObject);
+            //         }
+            //     }
+            // }
+            
+            //添加上次有但这次没有的箱子（销毁）
+            // for (int i = 0; i < mapSize.x; i++) {
+            //     for (int j = 0; j < mapSize.y; j++) {
+            //         if (oldObjects[i, j].type == BlockType.Box && Objects[i, j] == null) {
+            //             
+            //         }
+            //     }
+            // }
+            
             for (int i = 0; i < mapSize.x; i++) {
                 for (int j = 0; j < mapSize.y; j++) {
                     if (Objects[i, j] != null) {
@@ -132,7 +157,7 @@ public class MapCtrl : MonoBehaviour {
             for (int j = 0; j < mapSize.y; j++) {
                 var m = Objects[i, j];
                 if (m == null) {
-                    Grids[i, j].color = Color.white;
+                    Grids[i, j].color = Color.gray;
                     continue;
                 }
 

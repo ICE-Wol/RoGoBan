@@ -14,6 +14,8 @@ namespace _Script {
         public WallCtrl wallPrefab;
         public BoxCtrl boxPrefab;
         public PlayerCtrl playerPrefab;
+        
+        public ColorPicker colorPicker;
         public void InitEditBlock() {
             editBlockList = new SpriteRenderer[4];
             for (int i = 0; i < editBlockList.Length; i++) {
@@ -53,6 +55,7 @@ namespace _Script {
         public void SetEditBlockByMouse() {
             if (Input.GetMouseButtonDown(0)) {
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (mousePos.x > 0) return;
                 var hit = Physics2D.Raycast(mousePos, Vector2.zero);
                 if (hit.collider != null) {
                     var block = hit.collider.GetComponent<Block>();
@@ -72,14 +75,21 @@ namespace _Script {
             editBlockList[(int)curEditBlock].transform.localScale = Vector3.one * 1.2f;
         }
 
-        public void PaintGrid() {
-            if (Input.GetMouseButtonDown(0)) {
+        private void PutBlockOnGrid() {
+            if (Input.GetMouseButton(0)) {
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var hit = Physics2D.Raycast(mousePos, Vector2.zero);
                 if (hit.collider != null) {
                     var block = hit.collider.GetComponent<Block>();
                     if(block.isTemplate) return;
                     if (block != null) {
+                        //print(MapCtrl.mapCtrl.GetObjectTypeFromGrid(block.pos));
+                        if (curEditBlock ==
+                            MapCtrl.mapCtrl.GetObjectTypeFromGrid(block.pos)) {
+                            //print("Same Type!");
+                            return;
+                        }
+                        //MapCtrl.mapCtrl.MemGrids();
                         Block newBlock = null;
                         Vector3 newPos = block.transform.position;
                         if (curEditBlock == BlockType.Wall) {
@@ -89,11 +99,13 @@ namespace _Script {
                             newBlock = Instantiate(boxPrefab, newPos, Quaternion.identity);
                             newBlock.tarPos = newPos;
                             newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
+                            newBlock.color = colorPicker.curColor;
                         }
                         else if (curEditBlock == BlockType.Player) {
                             newBlock = Instantiate(playerPrefab, newPos, Quaternion.identity);
                             newBlock.tarPos = newPos;
                             newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
+                            newBlock.color = colorPicker.curColor;
                         }
                         else if (curEditBlock == BlockType.Empty) {
                             if (block.type != BlockType.Empty) {
@@ -107,13 +119,33 @@ namespace _Script {
                         int x = (int)newPos.x;
                         int y = (int)newPos.y;
                         Vector2Int pos = new Vector2Int(x, y);
-                        if(MapCtrl.mapCtrl.GetObjectFromGrid(pos) != null)
+                        if (MapCtrl.mapCtrl.GetObjectFromGrid(pos) != null) {
                             Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(pos).gameObject);
+                        }
                         MapCtrl.mapCtrl.SetObjectToGrid(pos,newBlock);
                     }
                 }
             }
         }
+        
+        private void RemoveBlockOnGrid() {
+            if (Input.GetMouseButton(1)) {
+                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                var hit = Physics2D.Raycast(mousePos, Vector2.zero);
+                if (hit.collider != null) {
+                    var block = hit.collider.GetComponent<Block>();
+                    if (block != null) {
+                        if (block.isTemplate) return;
+                        //print(block.type);
+                        //if (block.type == BlockType.Empty) return;
+                        if(MapCtrl.mapCtrl.GetObjectFromGrid(block.pos) == null) return;
+                        Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(block.pos).gameObject);
+                        MapCtrl.mapCtrl.SetObjectToGrid(block.pos, null);
+                    }
+                }
+            }
+        }
+        
 
         private void Start() {
             InitEditBlock();
@@ -122,9 +154,10 @@ namespace _Script {
         private void Update() {
             SetEditMode();
             if (isEditMode) {
-                SetEditBlockByKeyBoard();
+                //SetEditBlockByKeyBoard();
                 SetEditBlockByMouse();
-                PaintGrid();
+                PutBlockOnGrid();
+                RemoveBlockOnGrid();
             }
         }
     }

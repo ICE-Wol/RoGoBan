@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  spriteRenderer: {fileID: 6746427993201622403}
+  isTemplate: 0
   color: {r: 0, g: 0, b: 0, a: 0}
   pos: {x: 0, y: 0}
   tarPos: {x: 0, y: 0, z: 0}
