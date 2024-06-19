@@ -57,45 +57,11 @@ public class PlayerCtrl : Block {
             }
         }
     }
-    
-   // private bool TryTransitPush(int dir, Vector2Int targetPos) {
-   //      var wallExist = FindFirstBlock(BlockType.Wall, dir, out var step);
-   //     
-   //      if (!wallExist) return false;
-   //      print(wallExist);
-   //      for (int i = step - 2; i >= 0; i--) {
-   //          var pos1 = this.pos + dirVector[dir] * i;
-   //          var pos2 = this.pos + dirVector[dir] * (i + 1);
-   //          
-   //          var col1 = MapCtrl.mapCtrl.GetColorFromObject(pos1);
-   //          var col2 = MapCtrl.mapCtrl.GetColorFromObject(pos2);
-   //          if (ColorPicker.colorPicker.GetColorLevel(col1) == 2 && 
-   //               ColorPicker.colorPicker.GetColorLevel(col2) == 2 &&
-   //               col1 != col2){ 
-   //              
-   //              MapCtrl.mapCtrl.MemGrids();
-   //              print("entered");
-   //              
-   //              var box1 = MapCtrl.mapCtrl.GetObjectFromGrid(pos1);
-   //              var box2 = MapCtrl.mapCtrl.GetObjectFromGrid(pos2);
-   //
-   //              var color = Color.white;
-   //              var colorExtract = color - col2;
-   //              var colorRemain = col1 - colorExtract;
-   //              
-   //              box2.SetColor(Color.white);
-   //              box1.SetColor(colorRemain);
-   //              
-   //              return true;
-   //          }
-   //      }
-   //      return true;
-   //  }
-
 
     private bool TryMergePush(int dir, Vector2Int targetPos) {
-        var wallExist = FindFirstBlock(BlockType.Wall, dir, out var step);
+        var wallExist = FindFirstBlockWithoutAir(BlockType.Wall, dir, out var step);
         if (!wallExist) return false;
+        
 
         for (int i = step - 2; i >= 0; i--) {
             var pos1 = this.pos + dirVector[dir] * i;
@@ -184,12 +150,13 @@ public class PlayerCtrl : Block {
         this.tarPos = (Vector2)targetPos;
     }
 
-    bool FindFirstBlock(BlockType type, int dir, out int step) {
+    bool FindFirstBlockWithoutAir(BlockType type, int dir, out int step) {
         step = 0;
         for (int i = 1; i < 1000; i++) {
             step += 1;
             var pos = this.pos + dirVector[dir] * i;
             if (!MapCtrl.mapCtrl.IsPosValid(pos)) return false;
+            if (MapCtrl.mapCtrl.GetObjectTypeFromGrid(pos) == BlockType.Empty) return false;
             if (MapCtrl.mapCtrl.GetObjectTypeFromGrid(pos) == type) return true;
         }
         return false;

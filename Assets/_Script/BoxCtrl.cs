@@ -29,6 +29,7 @@ public class BoxCtrl : Block {
 
 
     private void Update() {
+        spriteRenderer.color = color;
         if (!transform.position.Equal(tarPos, 0.01f)) {
             transform.position = transform.position.ApproachValue(tarPos, 16f);
         }

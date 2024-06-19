@@ -90,48 +90,52 @@ namespace _Script {
                             return;
                         }
                         //MapCtrl.mapCtrl.MemGrids();
-                        Block newBlock = null;
-                        Vector3 newPos = block.transform.position;
-                        if (curEditBlock == BlockType.Wall) {
-                            newBlock = Instantiate(wallPrefab, newPos, Quaternion.identity);
-                        }
-                        else if (curEditBlock == BlockType.Box) {
-                            newBlock = Instantiate(boxPrefab, newPos, Quaternion.identity);
-                            newBlock.tarPos = newPos;
-                            newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
-                            newBlock.color = colorPicker.curColor;
-                        }
-                        else if (curEditBlock == BlockType.Player) {
-                            newBlock = Instantiate(playerPrefab, newPos, Quaternion.identity);
-                            newBlock.tarPos = newPos;
-                            newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
-                            newBlock.color = colorPicker.curColor;
-                        }
-                        else if (curEditBlock == BlockType.Empty) {
-                            if (block.type != BlockType.Empty) {
-                                Destroy(block.gameObject);
-                            }
-                        }
-                        else {
-                            Debug.LogError("Invalid Block Type!");
-                        }
 
-                        int x = (int)newPos.x;
-                        int y = (int)newPos.y;
-                        Vector2Int pos = new Vector2Int(x, y);
-                        if (MapCtrl.mapCtrl.GetObjectFromGrid(pos) != null) {
-                            Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(pos).gameObject);
-                        }
-                        MapCtrl.mapCtrl.SetObjectToGrid(pos,newBlock);
-                        newBlock.transform.parent = MapCtrl.mapCtrl.transform;
-                        
-                        
-                        
+
+                        CreateNewBlock(block);
                     }
                 }
             }
         }
-        
+
+        private void CreateNewBlock(Block block) {
+            Block newBlock = null;
+            Vector3 newPos = block.transform.position;
+            if (curEditBlock == BlockType.Wall) {
+                newBlock = Instantiate(wallPrefab, newPos, Quaternion.identity);
+                newBlock.color = Color.clear;
+            }
+            else if (curEditBlock == BlockType.Box) {
+                newBlock = Instantiate(boxPrefab, newPos, Quaternion.identity);
+                newBlock.tarPos = newPos;
+                newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
+                newBlock.color = colorPicker.curColor;
+            }
+            else if (curEditBlock == BlockType.Player) {
+                newBlock = Instantiate(playerPrefab, newPos, Quaternion.identity);
+                newBlock.tarPos = newPos;
+                newBlock.pos = new Vector2Int((int)newPos.x, (int)newPos.y);
+                newBlock.color = colorPicker.curColor;
+            }
+            else if (curEditBlock == BlockType.Empty) {
+                if (block.type != BlockType.Empty) {
+                    Destroy(block.gameObject);
+                }
+            }
+            else {
+                Debug.LogError("Invalid Block Type!");
+            }
+
+            int x = (int)newPos.x;
+            int y = (int)newPos.y;
+            Vector2Int pos = new Vector2Int(x, y);
+            if (MapCtrl.mapCtrl.GetObjectFromGrid(pos) != null) {
+                Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(pos).gameObject);
+            }
+            MapCtrl.mapCtrl.SetObjectToGrid(pos,newBlock);
+            if(newBlock != null) newBlock.transform.parent = MapCtrl.mapCtrl.transform;
+        }
+
         private void RemoveBlockOnGrid() {
             if (Input.GetMouseButton(1)) {
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

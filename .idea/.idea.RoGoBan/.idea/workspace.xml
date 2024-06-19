@@ -6,12 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Box.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Box.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/ColorPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ColorPicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +79,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\Unity\Project\RoGoBan -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Unity\Project\RoGoBan" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -79,7 +87,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c2\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\Unity\Project\RoGoBan -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Unity\Project\RoGoBan" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -96,10 +104,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14776">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="14776" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -131,6 +139,10 @@
       <workItem from="1718758354830" duration="4583000" />
       <workItem from="1718763085590" duration="2175000" />
       <workItem from="1718765793201" duration="1682000" />
+      <workItem from="1718779424953" duration="1234000" />
+      <workItem from="1718780682842" duration="7676000" />
+      <workItem from="1718788873552" duration="344000" />
+      <workItem from="1718803439890" duration="2340000" />
     </task>
     <servers />
   </component>
@@ -141,5 +153,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs</url>
+          <line>40</line>
+          <properties documentPath="E:\Unity\Project\RoGoBan\Assets\_Script\PlayerCtrl.cs" initialLine="40" containingFunctionPresentation="Method 'Move'">
+            <startOffsets>
+              <option value="1086" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1087" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

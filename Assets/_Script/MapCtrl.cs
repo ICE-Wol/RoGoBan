@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using _Scripts.Tools;
 using TMPro;
 using Unity.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -11,6 +13,19 @@ public enum BlockType{
     Wall,
     Box,
     Player,
+}
+
+public enum ColorType{
+    None,
+    Red,
+    Green,
+    Blue,
+    Yellow,
+    Cyan,
+    Magenta,
+    Black,
+    YinYang,
+    White,
 }
 
 public class MapCtrl : MonoBehaviour {
@@ -23,19 +38,7 @@ public class MapCtrl : MonoBehaviour {
         else {
             Destroy(gameObject);
         }
-    }
-
-    public Vector2Int mapSize;
-    
-    public SpriteRenderer gridTemplate;
-    public SpriteRenderer[,] Grids;
-    public Color[,] ColorTags;
-    public Block[,] Objects;
-
-    public PlayerCtrl playerCtrl;
-
-    public List<Block[,]> HistoryList;
-    private void Start() {
+        
         //玩家、箱子、墙等对象
         Objects = new Block[mapSize.x, mapSize.y];
         
@@ -48,6 +51,22 @@ public class MapCtrl : MonoBehaviour {
         //历史记录，用于撤销
         HistoryList = new List<Block[,]>();
 
+        InitGrids();
+    }
+    
+    public Vector2Int mapSize;
+    
+    public SpriteRenderer gridTemplate;
+    
+    public SpriteRenderer[,] Grids;
+    public Color[,] ColorTags;
+    public Block[,] Objects;
+    
+    public List<Block[,]> HistoryList;
+
+    public TextAsset mapData;
+
+    private void InitGrids() {
         // (1) 场景、prefab、gameobject里没有挂载对象
         // 用数据生成出来
         // (2) 场景、prefab里已经有配置好的关卡 gameobject
@@ -60,9 +79,57 @@ public class MapCtrl : MonoBehaviour {
                 grid.GetComponent<Block>().pos = new Vector2Int(x, y);
             }
         }
+    }
 
-        //playerCtrl = Instantiate(playerCtrl, new Vector3(0, 0, 0), Quaternion.identity);
-        SetObjectToGrid(new Vector2Int(0, 0), playerCtrl);
+    public ColorType ColorToEnum(Color c) {
+        if(c == Color.red) return ColorType.Red;
+        if(c == Color.green) return ColorType.Green;
+        if(c == Color.blue) return ColorType.Blue;
+        if(c == new Color(1,1,0,1)) return ColorType.Yellow;
+        if(c == Color.cyan) return ColorType.Cyan;
+        if(c == Color.magenta) return ColorType.Magenta;
+        if(c == Color.black) return ColorType.Black;
+        if(c == Color.gray) return ColorType.YinYang;
+        if(c == Color.white) return ColorType.White;
+        return ColorType.White;
+    }
+    
+    public Color EnumToColor(ColorType c) {
+        switch (c) {
+            case ColorType.Red: return Color.red;
+            case ColorType.Green: return Color.green;
+            case ColorType.Blue: return Color.blue;
+            case ColorType.Yellow: return new Color(1, 1, 0, 1);
+            case ColorType.Cyan: return Color.cyan;
+            case ColorType.Magenta: return Color.magenta;
+            case ColorType.Black: return Color.black;
+            case ColorType.YinYang: return Color.gray;
+            case ColorType.White: return Color.white;
+            default: return Color.white;
+        }
+    }
+
+
+    public void SaveMapData() {
+        if (Input.GetKeyDown(KeyCode.C)) {
+            string data = "";
+            data += mapSize.x + " " + mapSize.y + "\n";
+            for (int i = 0; i < mapSize.x; i++) {
+                for (int j = 0; j < mapSize.y; j++) {
+                    data += i + " " + j + " ";
+                    if (Objects[i, j] == null) {
+                        data += "0\n";
+                        continue;
+                    }
+                    data += (int)Objects[i, j].type + " " + (int)ColorToEnum(Objects[i, j].color) + "\n";
+                }
+                data += "\n";
+            }
+            Debug.Log(data);
+            string path = "Assets/Resources/sample.txt";
+            File.WriteAllText(path,data);
+            AssetDatabase.Refresh();
+        }
     }
 
     public void MemGrids() {
@@ -120,6 +187,8 @@ public class MapCtrl : MonoBehaviour {
     private void Update() {
         SetBlocksColorInGrid();
         SetBlocksFromHistory();
+        
+        SaveMapData();
     }
 
     public bool IsPosValid(Vector2Int pos) {
@@ -139,7 +208,10 @@ public class MapCtrl : MonoBehaviour {
     }
     
     public Color GetColorFromObject(Vector2Int pos) {
-        if (IsPosValid(pos)) return GetObjectFromGrid(pos).color;
+        if (IsPosValid(pos)) {
+            if (GetObjectFromGrid(pos) != null)
+                return GetObjectFromGrid(pos).color;
+        }
         return Color.clear;
     }
 
@@ -180,49 +252,4 @@ public class MapCtrl : MonoBehaviour {
             }
         }
     }
-
 }
-
-//     public void ChangeBlockType() {
-//         if (Input.GetMouseButtonDown(0)) {
-//             var pos = Input.mousePosition;
-//             pos = Camera.main.ScreenToWorldPoint(pos);
-//             var x = (int)(pos.x + 0.5f);
-//             var y = (int)(pos.y + 0.5f);
-//             //if (x >= 0 && x < gridSize.x && y >= 0 && y < gridSize.y) {
-//             if (IsPosValid(new Vector2Int(x, y))) {
-//                 int blockType;
-//                 if(Objects[x, y] == null) {
-//                     blockType = 0;
-//                 }
-//                 else {
-//                     blockType = (int)Objects[x, y].type;
-//                 }
-//                 if (blockType != 3) {
-//                     blockType += 1;
-//                     if(blockType == 3) blockType = 0;
-//                 }
-//                 else {
-//                     print("Can't Change Player Type!");
-//                     return;
-//                 }
-//
-//                 Debug.Log("Change Grid Type To: " + (BlockType)blockType);
-//                 Block newBlock = null;
-//                 if (blockType == 1) {
-//                     newBlock = Instantiate(wallCtrl, new Vector3(x, y, 0), Quaternion.identity);
-//                 }
-//                 else if (blockType == 2) {
-//                     newBlock = Instantiate(boxCtrl, new Vector3(x, y, 0), Quaternion.identity);
-//                     newBlock.tarPos = new Vector3(x, y, 0);
-//                     newBlock.pos = new Vector2Int(x, y);
-//                     newBlock.HistoryPos.Add((newBlock.pos, newBlock.color));
-//                     
-//                 }
-//                 if(Objects[x,y] != null)
-//                     Destroy(Objects[x, y].gameObject);
-//                 Objects[x, y] = newBlock;
-//
-//             }
-//         }
-//     }
