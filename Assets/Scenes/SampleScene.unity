@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a66f0ed1ea1624d8b56cbb2b9648f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapSize: {x: 6, y: 5}
+  mapSize: {x: 10, y: 8}
   gridTemplate: {fileID: 7072151735763774682, guid: 322144704b0a70040a78bfa77a4af2c3, type: 3}
   playerCtrl: {fileID: 0}
 --- !u!4 &445253822
@@ -272,7 +272,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

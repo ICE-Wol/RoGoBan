@@ -123,6 +123,10 @@ namespace _Script {
                             Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(pos).gameObject);
                         }
                         MapCtrl.mapCtrl.SetObjectToGrid(pos,newBlock);
+                        newBlock.transform.parent = MapCtrl.mapCtrl.transform;
+                        
+                        
+                        
                     }
                 }
             }

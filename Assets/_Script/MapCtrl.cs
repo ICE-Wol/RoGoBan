@@ -81,7 +81,7 @@ public class MapCtrl : MonoBehaviour {
                 print("No History!");
                 return;
             }
-            print(HistoryList.Count);
+            //print(HistoryList.Count);
             Objects = HistoryList[^1];
             HistoryList.RemoveAt(HistoryList.Count - 1);
             
@@ -134,8 +134,13 @@ public class MapCtrl : MonoBehaviour {
         //else Debug.LogError($"Invalid Position {pos}");
     }
 
-    public void SetColorTagToGrid(Vector2Int pos, Color color) {
-        if (IsPosValid(pos)) ColorTags[pos.x, pos.y] = color;
+    public void SetColorToObject(Vector2Int pos, Color color) {
+        if (IsPosValid(pos)) GetObjectFromGrid(pos).color = color;
+    }
+    
+    public Color GetColorFromObject(Vector2Int pos) {
+        if (IsPosValid(pos)) return GetObjectFromGrid(pos).color;
+        return Color.clear;
     }
 
     public Block GetObjectFromGrid(Vector2 pos) {

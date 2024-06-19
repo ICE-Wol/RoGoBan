@@ -23,6 +23,11 @@ public class Block : MonoBehaviour {
             spriteRenderer.color = color;
     }
 
+    public void SetColor(Color c) {
+        color = c;
+        spriteRenderer.color = c;
+    }
+
     // public void UndoAction() {
     //     if (HistoryPos.Count <= 1) { return; }
     //     

@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
+using Debug = UnityEngine.Debug;
 
 
 public class ColorPicker : MonoBehaviour {
@@ -16,14 +19,40 @@ public class ColorPicker : MonoBehaviour {
         }
     }
     
+    static Color Red => Color.red;
+    static Color Green => Color.green;
+    static Color Blue => Color.blue;
+        
+    static Color Yellow => new Color(1,1,0,1);
+    static Color Cyan => Color.cyan;
+    static Color Magenta => Color.magenta;
+    
+    static Color Black => Color.black;
+    static Color YinYang => Color.gray;
+    static Color White => Color.white;
+
+    public int GetColorLevel(Color c) {
+        if (c == Red || c == Green || c == Blue) {
+            return 1;
+        }else if (c == Yellow || c == Cyan || c == Magenta) {
+            return 2;
+        }else if (c == Black || c == YinYang || c == White) {
+            return 3;
+        }else {
+            return -1;
+        }
+    }
+    
+    
     public Color[] basicColors = new [] {
         Color.red,
         Color.green,
            Color.blue,
     };
 
+            
     public Color[] compoundColors = new[] {
-        Color.yellow,
+        new Color(1,1,0,1),
         Color.cyan,
         Color.magenta,
     };
@@ -32,6 +61,10 @@ public class ColorPicker : MonoBehaviour {
         Color.gray, 
         Color.white,
     };
+    
+    public enum MyEnum {
+        
+    }
     
     public SpriteRenderer colorBlock;
     public List<SpriteRenderer> colorBlockList;
@@ -47,7 +80,7 @@ public class ColorPicker : MonoBehaviour {
         };
 
         compoundColors = new[] {
-            Color.yellow,
+            new Color(1,1,0,1),
             Color.cyan,
             Color.magenta,
         };
@@ -104,9 +137,9 @@ public class ColorPicker : MonoBehaviour {
             var color = GetColorByMouse();
             if (color != Color.clear) {
                 curColor = color;
-                Debug.Log("Color: " + color);
+                //Debug.Log("Color: " + color);
             }else {
-                Debug.Log("No Color");
+                //Debug.Log("No Color");
             }
         }
     }
