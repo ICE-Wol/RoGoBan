@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class BoxCtrl : Block {
     public static List<BoxCtrl> boxList = new List<BoxCtrl>();
-    public BlockType blockType;
     
     public Vector2Int[] dirVector = 
     {

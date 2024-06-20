@@ -49,7 +49,7 @@ public class MapCtrl : MonoBehaviour {
         ColorTags = new Color[mapSize.x, mapSize.y];
         
         //历史记录，用于撤销
-        HistoryList = new List<Block[,]>();
+        HistoryList = new List<(Block[,],Color[,])>();
 
         InitGrids();
     }
@@ -62,7 +62,7 @@ public class MapCtrl : MonoBehaviour {
     public Color[,] ColorTags;
     public Block[,] Objects;
     
-    public List<Block[,]> HistoryList;
+    public List<(Block[,],Color[,])> HistoryList;
 
     public TextAsset mapData;
 
@@ -139,9 +139,8 @@ public class MapCtrl : MonoBehaviour {
                 data += "\n";
             }
             Debug.Log(data);
-            var date = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
-            string path = "Assets/Resources/sample" + date + ".txt";
-            //File.Create(path);
+            var date = DateTime.Now.ToString("HH-mm-ss-MM-dd-yyyy");
+            string path = "Assets/Resources/" + date + ".txt";
             File.WriteAllText(path,data);
             AssetDatabase.Refresh();
         }
@@ -149,12 +148,15 @@ public class MapCtrl : MonoBehaviour {
 
     public void MemGrids() {
         var tempGrid = new Block[mapSize.x, mapSize.y];
+        var tempColor = new Color[mapSize.x, mapSize.y];
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
                 tempGrid[i, j] = Objects[i, j];
+                if(Objects[i, j] != null)
+                    tempColor[i, j] = Objects[i, j].color;
             }
         }
-        HistoryList.Add(tempGrid);
+        HistoryList.Add((tempGrid, tempColor));
     }
     
     public void SetBlocksFromHistory() {
@@ -164,38 +166,26 @@ public class MapCtrl : MonoBehaviour {
                 return;
             }
             //print(HistoryList.Count);
-            Objects = HistoryList[^1];
+            Objects = HistoryList[^1].Item1;
+            var colors = HistoryList[^1].Item2;
+            
+            
             HistoryList.RemoveAt(HistoryList.Count - 1);
-            
-            // //删除上次没有但这次有的箱子（生成）
-            // for (int i = 0; i < mapSize.x; i++) {
-            //     for (int j = 0; j < mapSize.y; j++) {
-            //         if (Objects[i, j].type == BlockType.Box && oldObjects[i, j] == null) {
-            //             Destroy(Objects[i, j].gameObject);
-            //         }
-            //     }
-            // }
-            
             
             for (int i = 0; i < mapSize.x; i++) {
                 for (int j = 0; j < mapSize.y; j++) {
                     if (Objects[i, j] != null) {
+                        if (!Objects[i, j].gameObject.activeSelf) {
+                            Objects[i, j].gameObject.SetActive(true);
+                        }
+
                         Objects[i, j].pos = new Vector2Int(i, j);
                         Objects[i, j].tarPos = new Vector3(i, j, 0);
+                        Objects[i, j].SetColor(colors[i, j]);
                     }
                 }
             }
             
-            // //添加上次有但这次没有的箱子（销毁）
-            // for (int i = 0; i < mapSize.x; i++) {
-            //     for (int j = 0; j < mapSize.y; j++) {
-            //         if (Objects[i, j].type == BlockType.Box && Objects[i, j].gameObject.activeSelf == false) {
-            //             Objects[i, j].gameObject.SetActive(true);
-            //             
-            //              
-            //         }
-            //     }
-            // }
         }
     }
     
@@ -256,7 +246,7 @@ public class MapCtrl : MonoBehaviour {
     private void SetBlocksColorInGrid() {
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
-                Grids[i, j].color = Color.gray;//ColorTags[i, j];
+                Grids[i, j].color = new Color(1,25/255f,0,0.2f);//ColorTags[i, j];
                 //todo
                 SpriteRenderer[] sr = Grids[i, j].GetComponentsInChildren<SpriteRenderer>();
                 sr[1].color = ColorTags[i, j];

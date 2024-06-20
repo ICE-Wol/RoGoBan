@@ -9,8 +9,6 @@ using UnityEngine;
 
 
 public class PlayerCtrl : Block {
-    public BlockType blockType;
-    
     public List<(int,float)> actionList = new List<(int,float)>();
     public float tolerateTime = 2f;
     
@@ -60,19 +58,25 @@ public class PlayerCtrl : Block {
 
     private bool TryMergePush(int dir, Vector2Int targetPos) {
         var wallExist = FindFirstBlockWithoutAir(BlockType.Wall, dir, out var step);
-        if (!wallExist) return false;
-        
+        if (!wallExist) return false; 
+                Debug.Log("enter try");
 
+        // 有破坏箱子的操作总是消耗pos1保留pos2
         for (int i = step - 2; i >= 0; i--) {
             var pos1 = this.pos + dirVector[dir] * i;
             var pos2 = this.pos + dirVector[dir] * (i + 1);
 
             var col1 = MapCtrl.mapCtrl.GetColorFromObject(pos1);
             var col2 = MapCtrl.mapCtrl.GetColorFromObject(pos2);
-
+            
+            var box1 = MapCtrl.mapCtrl.GetObjectFromGrid(pos1);
+            var box2 = MapCtrl.mapCtrl.GetObjectFromGrid(pos2);
+            
+            //机制1 组合
             if (ColorPicker.colorPicker.GetColorLevel(col1) == 1 &&
                 ColorPicker.colorPicker.GetColorLevel(col2) == 1 &&
                 col1 != col2) {
+                print("entered merge");
                 MapCtrl.mapCtrl.MemGrids();
 
                 MergeSecondBoxToFirst(pos2, pos1, col1, col2);
@@ -82,15 +86,13 @@ public class PlayerCtrl : Block {
                 return true;
             }
 
+            //机制2 转移
             if (ColorPicker.colorPicker.GetColorLevel(col1) == 2 &&
                 ColorPicker.colorPicker.GetColorLevel(col2) == 2 &&
                 col1 != col2) {
 
                 MapCtrl.mapCtrl.MemGrids();
-                print("entered");
-
-                var box1 = MapCtrl.mapCtrl.GetObjectFromGrid(pos1);
-                var box2 = MapCtrl.mapCtrl.GetObjectFromGrid(pos2);
+                print("entered transit");
 
                 var color = Color.white;
                 var colorExtract = color - col2;
@@ -98,7 +100,84 @@ public class PlayerCtrl : Block {
 
                 box2.SetColor(Color.white);
                 box1.SetColor(colorRemain);
+
+                //保留退回语句以保证每一次操作都至多只发生一次操作
+                return true;
             }
+            
+            //机制3 中和
+            if((col1 == Color.white && col2 == Color.black)
+               || (col1 == Color.black && col2 == Color.white)) {
+                MapCtrl.mapCtrl.MemGrids();
+                MergeSecondBoxToFirst(pos2, pos1, col1, col2);
+                MapCtrl.mapCtrl.GetObjectFromGrid(pos2).SetColor(Color.gray);
+                PushLineOfBoxes(dir, i);
+                MovePlayer(targetPos);
+                return true;
+            }
+            
+            //机制4 互补 保留离墙远的箱子保证玩家留存
+            if((col1 == Color.gray
+                && col2 != Color.black 
+                && col2 != Color.white
+                && col2 != Color.gray)
+               ||(col2 == Color.gray
+                  && col1 != Color.black
+                  && col1 != Color.white 
+                  && col1 != Color.gray)
+               ){
+                MapCtrl.mapCtrl.MemGrids();
+                
+                //阴阳箱 box1
+                //正常箱 box2
+                
+                //反色
+                var newColor = (Color.white - col2).SetAlpha(1f);
+                if(col2 == Color.gray) {
+                    newColor = (Color.white - col1).SetAlpha(1f);
+                }
+                
+                box1.SetColor(newColor);
+                
+                box2.gameObject.SetActive(false);
+                MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
+                
+                PushLineOfBoxes(dir, i);
+                MovePlayer(targetPos);
+                
+                return true;
+            }
+            
+            //机制5 爆发
+            if(col1 == Color.gray && col2 == Color.gray) {
+                MapCtrl.mapCtrl.MemGrids();
+                for (int x = 0; x < MapCtrl.mapCtrl.mapSize.x; x++) {
+                    for (int y = 0; y < MapCtrl.mapCtrl.mapSize.y; y++) {
+                        var pos = new Vector2Int(x, y);
+                        var obj = MapCtrl.mapCtrl.GetObjectFromGrid(pos);
+                        if(obj == null) continue;
+                        if (obj.type == BlockType.Box || obj.type == BlockType.Player) {
+                            if(obj.color != Color.black && obj.color != Color.white
+                               && obj.color != Color.gray) {
+                                var newColor = (Color.white - obj.color).SetAlpha(1f);
+                                obj.SetColor(newColor);
+                            }
+                           
+                        }
+                    }
+                    
+                }
+                box1.gameObject.SetActive(false);
+                box2.gameObject.SetActive(false);
+                
+                PushLineOfBoxes(dir, i);
+                MovePlayer(targetPos);
+                
+                return true;
+            }
+            
+            
+            
         }
 
 
@@ -110,6 +189,7 @@ public class PlayerCtrl : Block {
         var box1 = MapCtrl.mapCtrl.GetObjectFromGrid(pos1);
                 
         //todo 或者把他放在很远的地方。为了保留地图拷贝里的索引
+        //todo 回退功能关键点
         box2.gameObject.SetActive(false);
                 
         // [step = 0 .. i ] [step = i + 1 .. step - 1]
@@ -117,11 +197,11 @@ public class PlayerCtrl : Block {
         // (2) 把 pos1 的箱子隐藏
         // (3) 移动它之前 [0 .. i - 1] 的箱子的位置
                 
-        box1.color = col1 + col2;
-        box1.spriteRenderer.color = box1.color;
+        box1.SetColor((col1 + col2).SetAlpha(1f));
         box1.pos = pos2;
         box1.tarPos = new Vector3(pos2.x, pos2.y, 0);
         MapCtrl.mapCtrl.SetObjectToGrid(pos2, box1);
+        MapCtrl.mapCtrl.SetObjectToGrid(pos1, null);
                 
         //Debug.LogWarning($"{this.pos} => {pos1}");
     }

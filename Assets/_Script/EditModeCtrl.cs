@@ -126,7 +126,7 @@ namespace _Script {
             Vector3 newPos = block.transform.position;
             if (curEditBlock == BlockType.Wall) {
                 newBlock = Instantiate(wallPrefab, newPos, Quaternion.identity);
-                newBlock.color = Color.clear;
+                newBlock.color = Color.white;
             }
             else if (curEditBlock == BlockType.Box) {
                 newBlock = Instantiate(boxPrefab, newPos, Quaternion.identity);

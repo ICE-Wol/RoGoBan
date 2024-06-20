@@ -33,7 +33,7 @@ public class MapLoader : MonoBehaviour
         string[] size = lines[0].Split(' ');
         int width = int.Parse(size[0]);
         int height = int.Parse(size[1]);
-        Debug.Log("Map size: " + width + "x" + height);
+        //Debug.Log("Map size: " + width + "x" + height);
         
 
         // 读取地图数据
@@ -45,7 +45,7 @@ public class MapLoader : MonoBehaviour
             
             if(i > width * height) {
                 int color = int.Parse(lineData[2]);
-                Debug.Log($"Color Tag ({x},{y}) - Color Type: {color}");
+                //Debug.Log($"Color Tag ({x},{y}) - Color Type: {color}");
                 MapCtrl.mapCtrl.SetColorTagToGrid(new Vector2Int(x,y), 
                     MapCtrl.mapCtrl.EnumToColor((ColorType)color));
 
@@ -64,7 +64,7 @@ public class MapLoader : MonoBehaviour
             ColorType colorType = (ColorType)colorTypeInt;
 
             
-            Debug.Log($"Cell ({i - 1}) - Block Type: {blockType}, Color Type: {colorType}");
+            ////Debug.Log($"Cell ({i - 1}) - Block Type: {blockType}, Color Type: {colorType}");
             
             Block newBlock = null;
             switch (blockType) {
@@ -84,7 +84,7 @@ public class MapLoader : MonoBehaviour
                     newBlock.color = MapCtrl.mapCtrl.EnumToColor(colorType);
                     break;
             }
-            Debug.Log($"Block {newBlock} created at ({x}, {y})");
+            //Debug.Log($"Block {newBlock} created at ({x}, {y})");
             if (blockType == BlockType.Empty) continue;
             MapCtrl.mapCtrl.SetObjectToGrid(new Vector2Int(x, y),newBlock);
             
