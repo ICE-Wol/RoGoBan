@@ -113,6 +113,8 @@ public class MapCtrl : MonoBehaviour {
     public void SaveMapData() {
         if (Input.GetKeyDown(KeyCode.C)) {
             string data = "";
+            
+            //记录方块
             data += mapSize.x + " " + mapSize.y + "\n";
             for (int i = 0; i < mapSize.x; i++) {
                 for (int j = 0; j < mapSize.y; j++) {
@@ -125,8 +127,21 @@ public class MapCtrl : MonoBehaviour {
                 }
                 data += "\n";
             }
+            
+            //记录地板标记
+            
+            for (int i = 0; i < mapSize.x; i++) {
+                for (int j = 0; j < mapSize.y; j++) {
+                    if(ColorTags[i, j] == Color.clear) continue;
+                    data += i + " " + j + " ";
+                    data += (int)ColorToEnum(ColorTags[i, j]) + "\n";
+                }
+                data += "\n";
+            }
             Debug.Log(data);
-            string path = "Assets/Resources/sample.txt";
+            var date = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+            string path = "Assets/Resources/sample" + date + ".txt";
+            //File.Create(path);
             File.WriteAllText(path,data);
             AssetDatabase.Refresh();
         }
@@ -161,14 +176,6 @@ public class MapCtrl : MonoBehaviour {
             //     }
             // }
             
-            //添加上次有但这次没有的箱子（销毁）
-            // for (int i = 0; i < mapSize.x; i++) {
-            //     for (int j = 0; j < mapSize.y; j++) {
-            //         if (oldObjects[i, j].type == BlockType.Box && Objects[i, j] == null) {
-            //             
-            //         }
-            //     }
-            // }
             
             for (int i = 0; i < mapSize.x; i++) {
                 for (int j = 0; j < mapSize.y; j++) {
@@ -178,6 +185,17 @@ public class MapCtrl : MonoBehaviour {
                     }
                 }
             }
+            
+            // //添加上次有但这次没有的箱子（销毁）
+            // for (int i = 0; i < mapSize.x; i++) {
+            //     for (int j = 0; j < mapSize.y; j++) {
+            //         if (Objects[i, j].type == BlockType.Box && Objects[i, j].gameObject.activeSelf == false) {
+            //             Objects[i, j].gameObject.SetActive(true);
+            //             
+            //              
+            //         }
+            //     }
+            // }
         }
     }
     
@@ -225,30 +243,41 @@ public class MapCtrl : MonoBehaviour {
         return obj.type;
     }
 
-    public Color GetColorTagFromGrid(Vector2 pos) {
-        return ColorTags[(int)pos.x, (int)pos.y];
+    public void SetColorTagToGrid(Vector2Int pos, Color c) {
+        if(ColorTags[pos.x, pos.y] == Color.clear)
+            ColorTags[pos.x, pos.y]= c;
+        else ColorTags[pos.x, pos.y] = Color.clear;
+    }
+
+    public Color GetColorTagFromGrid(Vector2Int pos) {
+        return ColorTags[pos.x, pos.y];
     }
 
     private void SetBlocksColorInGrid() {
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
-                var m = Objects[i, j];
-                if (m == null) {
-                    Grids[i, j].color = Color.gray;
-                    continue;
-                }
-
-                switch (Objects[i, j].type) {
-                    case BlockType.Box:
-                        Grids[i, j].color = Color.yellow;
-                        break;
-                    case BlockType.Wall:
-                        Grids[i, j].color = Color.red;
-                        break;
-                    case BlockType.Player:
-                        Grids[i, j].color = Color.blue;
-                        break;
-                }
+                Grids[i, j].color = Color.gray;//ColorTags[i, j];
+                //todo
+                SpriteRenderer[] sr = Grids[i, j].GetComponentsInChildren<SpriteRenderer>();
+                sr[1].color = ColorTags[i, j];
+                //Grids[i, j].color = Color.gray;
+                // var m = Objects[i, j];
+                // if (m == null) {
+                //     Grids[i, j].color = Color.gray;
+                //     continue;
+                // }
+                //
+                // switch (Objects[i, j].type) {
+                //     case BlockType.Box:
+                //         Grids[i, j].color = Color.yellow;
+                //         break;
+                //     case BlockType.Wall:
+                //         Grids[i, j].color = Color.red;
+                //         break;
+                //     case BlockType.Player:
+                //         Grids[i, j].color = Color.blue;
+                //         break;
+                //}
             }
         }
     }

@@ -6,20 +6,47 @@
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Box.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Box.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Empty.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Box.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Empty.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Lit2DSceneTemplate.scenetemplate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Renderer2D.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Renderer2D.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Scenes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._UniversalRP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/._UniversalRP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Build Profiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Build Profiles/Windows.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Build Profiles/Windows.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/DefaultVolumeProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/DefaultVolumeProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/InputSystem_Actions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/InputSystem_Actions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Lit2DSceneTemplate.scenetemplate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Renderer2D.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Renderer2D.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Scenes/._URP2DSceneTemplate.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Scenes/._URP2DSceneTemplate.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Scenes/URP2DSceneTemplate.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/Scenes/URP2DSceneTemplate.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/UniversalRP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/UniversalRP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settings/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Wall.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,10 +131,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14776">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14776" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -143,6 +170,9 @@
       <workItem from="1718780682842" duration="7676000" />
       <workItem from="1718788873552" duration="344000" />
       <workItem from="1718803439890" duration="2340000" />
+      <workItem from="1718805947491" duration="3194000" />
+      <workItem from="1718844818314" duration="1562000" />
+      <workItem from="1718846515584" duration="6042000" />
     </task>
     <servers />
   </component>

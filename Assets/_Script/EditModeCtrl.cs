@@ -3,6 +3,7 @@
 namespace _Script {
     public class EditModeCtrl : MonoBehaviour {
         public bool isEditMode;
+        public GameObject editModePanel;
         public TMPro.TMP_Text editModeText;
         
         public BlockType curEditBlock;
@@ -14,6 +15,7 @@ namespace _Script {
         public WallCtrl wallPrefab;
         public BoxCtrl boxPrefab;
         public PlayerCtrl playerPrefab;
+        public SpriteRenderer tagPrefab;
         
         public ColorPicker colorPicker;
         public void InitEditBlock() {
@@ -47,6 +49,15 @@ namespace _Script {
         public void SetEditMode() {
             if (Input.GetKeyDown(KeyCode.E)) {
                 isEditMode = !isEditMode;
+                editModePanel.SetActive(isEditMode);
+                if (isEditMode) {
+                    Camera.main.transform.position = new Vector3(0, 0, -10);
+                } else {
+                    int x = MapCtrl.mapCtrl.mapSize.x;
+                    int y = MapCtrl.mapCtrl.mapSize.y;
+                    Camera.main.transform.position
+                        = new Vector3((x + y) / 4f, (x + y) / 4f, -10);
+                }
                 editModeText.text = 
                     (isEditMode ? "Edit Mode(E): ON" : "Edit Mode(E): OFF");
             }
@@ -75,13 +86,27 @@ namespace _Script {
             editBlockList[(int)curEditBlock].transform.localScale = Vector3.one * 1.2f;
         }
 
+        private void PutTagOnGrid() {
+            if (Input.GetMouseButtonDown(2)) {
+                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                var hit = Physics2D.Raycast(mousePos, Vector2.zero);
+                if (hit.collider != null) {
+                    var block = hit.collider.GetComponent<Block>();
+                    if (block.isTemplate) return;
+                    if (block != null) {
+                        MapCtrl.mapCtrl.SetColorTagToGrid(block.pos, colorPicker.curColor);
+                    }
+                }
+            }
+        }
+        
         private void PutBlockOnGrid() {
             if (Input.GetMouseButton(0)) {
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var hit = Physics2D.Raycast(mousePos, Vector2.zero);
                 if (hit.collider != null) {
                     var block = hit.collider.GetComponent<Block>();
-                    if(block.isTemplate) return;
+                    if (block.isTemplate) return;
                     if (block != null) {
                         //print(MapCtrl.mapCtrl.GetObjectTypeFromGrid(block.pos));
                         if (curEditBlock ==
@@ -90,8 +115,6 @@ namespace _Script {
                             return;
                         }
                         //MapCtrl.mapCtrl.MemGrids();
-
-
                         CreateNewBlock(block);
                     }
                 }
@@ -165,6 +188,7 @@ namespace _Script {
                 //SetEditBlockByKeyBoard();
                 SetEditBlockByMouse();
                 PutBlockOnGrid();
+                PutTagOnGrid();
                 RemoveBlockOnGrid();
             }
         }
