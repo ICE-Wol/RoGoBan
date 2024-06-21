@@ -142,7 +142,7 @@ public class PlayerCtrl : Block {
                 box2.gameObject.SetActive(false);
                 MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
                 
-                PushLineOfBoxes(dir, i);
+                PushLineOfBoxes(dir, i + 1);
                 MovePlayer(targetPos);
                 
                 return true;

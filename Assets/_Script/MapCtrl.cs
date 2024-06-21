@@ -64,8 +64,6 @@ public class MapCtrl : MonoBehaviour {
     
     public List<(Block[,],Color[,])> HistoryList;
 
-    public TextAsset mapData;
-
     private void InitGrids() {
         // (1) 场景、prefab、gameobject里没有挂载对象
         // 用数据生成出来
@@ -142,7 +140,7 @@ public class MapCtrl : MonoBehaviour {
             var date = DateTime.Now.ToString("HH-mm-ss-MM-dd-yyyy");
             string path = "Assets/Resources/" + date + ".txt";
             File.WriteAllText(path,data);
-            AssetDatabase.Refresh();
+            //AssetDatabase.Refresh();
         }
     }
 
@@ -178,10 +176,11 @@ public class MapCtrl : MonoBehaviour {
                         if (!Objects[i, j].gameObject.activeSelf) {
                             Objects[i, j].gameObject.SetActive(true);
                         }
-
+                        
                         Objects[i, j].pos = new Vector2Int(i, j);
                         Objects[i, j].tarPos = new Vector3(i, j, 0);
                         Objects[i, j].SetColor(colors[i, j]);
+                        SetObjectToGrid(Objects[i,j].pos, Objects[i, j]);
                     }
                 }
             }

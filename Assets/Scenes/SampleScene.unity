@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57074b1a11db4e53a6e69fa470e2a496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapData: {fileID: 4900000, guid: 362b8ed05b6cf23459a629df4c86fb85, type: 3}
+  mapData: {fileID: 4900000, guid: c9f1c1c0422e9f4478f5f9b702aa5638, type: 3}
   mapList: []
   blankMap: {fileID: 877910247}
   wallPrefab: {fileID: 6131560625916640327, guid: b763704edd901b845b5f6403ad478d13, type: 3}
