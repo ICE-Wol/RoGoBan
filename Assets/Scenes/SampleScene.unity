@@ -235,8 +235,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57074b1a11db4e53a6e69fa470e2a496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapData: {fileID: 4900000, guid: c9f1c1c0422e9f4478f5f9b702aa5638, type: 3}
-  mapList: []
+  mapData: {fileID: 4900000, guid: 02a4432f3c246e94a9a149d4443233dc, type: 3}
+  mapList:
+  - {fileID: 4900000, guid: cc19796e532d1994e978b7a1acd9da71, type: 3}
+  - {fileID: 4900000, guid: 73ddcc07930441844be6f1bdc574b205, type: 3}
+  - {fileID: 4900000, guid: 8431abaa4a2487b48853461030aa6023, type: 3}
+  - {fileID: 4900000, guid: 1fb60864ec0b83c44b0487e1d5e2e020, type: 3}
+  - {fileID: 4900000, guid: ae33037b8004a8b418f35358a6a1358e, type: 3}
+  - {fileID: 4900000, guid: 7f88f242f45314a4d8ef53a20d451ce4, type: 3}
+  - {fileID: 4900000, guid: 41d387dc64fdbba46b19d5b6edb03cf8, type: 3}
+  - {fileID: 4900000, guid: 0287fee5c38b16043bdd1f8ec67132c3, type: 3}
+  - {fileID: 4900000, guid: 1e17d6fcc59361542b0b75fa6001f8b7, type: 3}
+  - {fileID: 4900000, guid: d15f0e9213b1f6e488a33e4ef7c07b74, type: 3}
+  - {fileID: 4900000, guid: 8212f46968ef81b419898e9fc208621c, type: 3}
+  - {fileID: 4900000, guid: d86f46d3d568eaa4b9a8abfcb4e05014, type: 3}
+  - {fileID: 4900000, guid: 06cb19b95f9760b4099b051e4dec2417, type: 3}
+  - {fileID: 4900000, guid: c5e25664477ad244fbf5d35a7ffe77ae, type: 3}
+  - {fileID: 4900000, guid: b69b25d5058959f46afaf301322782d7, type: 3}
+  - {fileID: 4900000, guid: fb5a226067fbbd34f85578a95d7e080e, type: 3}
+  - {fileID: 4900000, guid: 53f9934b96bfcd64492f81d830ad80aa, type: 3}
+  - {fileID: 4900000, guid: d012221ddb84057478719f74ad7ea009, type: 3}
+  - {fileID: 4900000, guid: a29cee84be45f5b459ec751a42ce13a3, type: 3}
+  - {fileID: 4900000, guid: b8203c0cfd58de149b8b4c579b9df974, type: 3}
+  - {fileID: 4900000, guid: e28906bf373b5b740b5ff02aec5f4a6f, type: 3}
+  - {fileID: 4900000, guid: 1e9a6b58d57dfdc448a4f7b99cb1d98c, type: 3}
+  - {fileID: 4900000, guid: 83f1bb5cc93102243b5863e80bffc7c1, type: 3}
+  - {fileID: 4900000, guid: a125f14abdf97154280981ecef933a33, type: 3}
+  - {fileID: 4900000, guid: c727dc2ceb31bbe4ba3c045890de3b0f, type: 3}
+  - {fileID: 4900000, guid: c2bb4dec39fe8ec4cb34825c94f82023, type: 3}
+  - {fileID: 4900000, guid: 7ab6ea797736b4440ade1a18c7502110, type: 3}
+  - {fileID: 4900000, guid: 19fcb58378fb33948aa926e5d68f55ba, type: 3}
+  - {fileID: 4900000, guid: e4c1600df70efcd4792ccd4ded37a1eb, type: 3}
+  - {fileID: 4900000, guid: a401b7d0e5779b340853f32b0e0e6526, type: 3}
+  - {fileID: 4900000, guid: dc910487485e30d42a4214b536df04b9, type: 3}
+  - {fileID: 4900000, guid: e817682aae1ff8448b62be3a17288d21, type: 3}
+  - {fileID: 4900000, guid: 891c59f4c23faa4409476db48466a768, type: 3}
+  - {fileID: 4900000, guid: aaff1017d8dafef4f9dfb09ca2657f4b, type: 3}
+  - {fileID: 4900000, guid: 9d1380e38bc6e61439937d61a7d148a1, type: 3}
+  - {fileID: 4900000, guid: 105d23fd2034947499748f0f1b48a4d1, type: 3}
+  - {fileID: 4900000, guid: 5f6a83a4ef1374f41856700f23020098, type: 3}
   blankMap: {fileID: 877910247}
   wallPrefab: {fileID: 6131560625916640327, guid: b763704edd901b845b5f6403ad478d13, type: 3}
   boxPrefab: {fileID: 6586887052870634868, guid: 8f7c7eb73acd8ed468e016d280447fcd, type: 3}
@@ -734,7 +771,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapSize: {x: 10, y: 10}
   gridTemplate: {fileID: 7072151735763774682, guid: 322144704b0a70040a78bfa77a4af2c3, type: 3}
-  mapData: {fileID: 0}
 --- !u!4 &1149324685
 Transform:
   m_ObjectHideFlags: 0
@@ -766,6 +802,14 @@ PrefabInstance:
       propertyPath: mapData
       value: 
       objectReference: {fileID: 4900000, guid: ad59338fc8089b54e86b4ee6d38ddbc1, type: 3}
+    - target: {fileID: 484965324768586250, guid: 24262fd8ffd34594a98449da5596a470, type: 3}
+      propertyPath: mapSize.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 484965324768586250, guid: 24262fd8ffd34594a98449da5596a470, type: 3}
+      propertyPath: mapSize.y
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7659700870618116841, guid: 24262fd8ffd34594a98449da5596a470, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.906767
