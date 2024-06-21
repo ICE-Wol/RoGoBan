@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 namespace _Script {
     public class EditModeCtrl : MonoBehaviour {
@@ -18,6 +19,11 @@ namespace _Script {
         public SpriteRenderer tagPrefab;
         
         public ColorPicker colorPicker;
+        
+        private void Awake() {
+            isEditMode = false;
+            editModePanel.transform.localPosition = isEditMode ? Vector3.zero : new Vector3(-20f, 0, 0);
+        }
         public void InitEditBlock() {
             editBlockList = new SpriteRenderer[4];
             for (int i = 0; i < editBlockList.Length; i++) {
@@ -28,7 +34,6 @@ namespace _Script {
                 editBlockList[i].GetComponent<Block>().type = (BlockType)i;
                 editBlockList[i].GetComponent<Block>().isTemplate = true;
                 
-                    
             }
         }
 
@@ -49,7 +54,8 @@ namespace _Script {
         public void SetEditMode() {
             if (Input.GetKeyDown(KeyCode.E)) {
                 isEditMode = !isEditMode;
-                editModePanel.SetActive(isEditMode);
+                //editModePanel.SetActive(isEditMode);
+                editModePanel.transform.localPosition = isEditMode ? Vector3.zero : new Vector3(-20f, 0, 0);
                 if (isEditMode) {
                     Camera.main.transform.position = new Vector3(0, 0, -10);
                 } else {
@@ -149,8 +155,9 @@ namespace _Script {
                 Debug.LogError("Invalid Block Type!");
             }
 
-            int x = (int)newPos.x;
-            int y = (int)newPos.y;
+            int x = Mathf.RoundToInt(newPos.x);
+            int y = Mathf.RoundToInt(newPos.y);
+            //print(newPos.x + " " + x);
             Vector2Int pos = new Vector2Int(x, y);
             if (MapCtrl.mapCtrl.GetObjectFromGrid(pos) != null) {
                 Destroy(MapCtrl.mapCtrl.GetObjectFromGrid(pos).gameObject);

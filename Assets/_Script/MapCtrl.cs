@@ -31,29 +31,29 @@ public enum ColorType{
 public class MapCtrl : MonoBehaviour {
     public static MapCtrl mapCtrl;
 
+    public bool isInited;
     private void Awake() {
-        if (mapCtrl == null) {
-            mapCtrl = this;
-        }
-        else {
-            Destroy(gameObject);
-        }
-        
+        mapCtrl = this;
+    }
+
+    public void InitWithSize(int x, int y) {
         //玩家、箱子、墙等对象
-        Objects = new Block[mapSize.x, mapSize.y];
+        Objects = new Block[x, y];
         
         //地板，用于射线检测
-        Grids = new SpriteRenderer[mapSize.x, mapSize.y];
+        Grids = new SpriteRenderer[x, y];
         
         //地板标记，用于通关
-        ColorTags = new Color[mapSize.x, mapSize.y];
+        ColorTags = new Color[x, y];
         
         //历史记录，用于撤销
         HistoryList = new List<(Block[,],Color[,])>();
+        
+        mapSize = new Vector2Int(x, y);
 
         InitGrids();
     }
-    
+
     public Vector2Int mapSize;
     
     public SpriteRenderer gridTemplate;
@@ -245,29 +245,37 @@ public class MapCtrl : MonoBehaviour {
     private void SetBlocksColorInGrid() {
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
+                
                 Grids[i, j].color = new Color(1,25/255f,0,0.2f);//ColorTags[i, j];
-                //todo
-                SpriteRenderer[] sr = Grids[i, j].GetComponentsInChildren<SpriteRenderer>();
-                sr[1].color = ColorTags[i, j];
-                //Grids[i, j].color = Color.gray;
-                // var m = Objects[i, j];
-                // if (m == null) {
-                //     Grids[i, j].color = Color.gray;
-                //     continue;
-                // }
+                 SpriteRenderer[] sr = Grids[i, j].GetComponentsInChildren<SpriteRenderer>();
+                 sr[1].color = ColorTags[i, j];
+                 
+                // Grids[i, j].color = Color.gray;
+                //  var m = Objects[i, j];
+                //  if (m == null) {
+                //      Grids[i, j].color = Color.gray;
+                //      continue;
+                //  }
                 //
-                // switch (Objects[i, j].type) {
-                //     case BlockType.Box:
-                //         Grids[i, j].color = Color.yellow;
-                //         break;
-                //     case BlockType.Wall:
-                //         Grids[i, j].color = Color.red;
-                //         break;
-                //     case BlockType.Player:
-                //         Grids[i, j].color = Color.blue;
-                //         break;
+                //  switch (Objects[i, j].type) {
+                //      case BlockType.Box:
+                //          Grids[i, j].color = Color.yellow;
+                //          break;
+                //      case BlockType.Wall:
+                //          Grids[i, j].color = Color.red;
+                //          break;
+                //      case BlockType.Player:
+                //          Grids[i, j].color = Color.cyan;
+                //          break;
                 //}
             }
         }
+    }
+
+    private void OnDestroy() {
+        if (mapCtrl == this) {
+            mapCtrl = null;
+        }
+        print("Destroy MapCtrl!");
     }
 }

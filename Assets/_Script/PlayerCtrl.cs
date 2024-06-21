@@ -59,12 +59,13 @@ public class PlayerCtrl : Block {
     private bool TryMergePush(int dir, Vector2Int targetPos) {
         var wallExist = FindFirstBlockWithoutAir(BlockType.Wall, dir, out var step);
         if (!wallExist) return false; 
-                Debug.Log("enter try");
+               // Debug.Log("enter try");
 
         // 有破坏箱子的操作总是消耗pos1保留pos2
         for (int i = step - 2; i >= 0; i--) {
             var pos1 = this.pos + dirVector[dir] * i;
             var pos2 = this.pos + dirVector[dir] * (i + 1);
+            
 
             var col1 = MapCtrl.mapCtrl.GetColorFromObject(pos1);
             var col2 = MapCtrl.mapCtrl.GetColorFromObject(pos2);
@@ -72,11 +73,27 @@ public class PlayerCtrl : Block {
             var box1 = MapCtrl.mapCtrl.GetObjectFromGrid(pos1);
             var box2 = MapCtrl.mapCtrl.GetObjectFromGrid(pos2);
             
+            // print(pos1 + " " + pos2);
+            // print(box1.type + " " + box2.type);
+            // print(col1 + " " + col2);
+            
             //机制1 组合
             if (ColorPicker.colorPicker.GetColorLevel(col1) == 1 &&
                 ColorPicker.colorPicker.GetColorLevel(col2) == 1 &&
                 col1 != col2) {
                 print("entered merge");
+                MapCtrl.mapCtrl.MemGrids();
+
+                MergeSecondBoxToFirst(pos2, pos1, col1, col2);
+                PushLineOfBoxes(dir, i);
+                MovePlayer(targetPos);
+
+                return true;
+            }
+            
+            //机制1.5 混合成白色
+            if ((col1 + col2).SetAlpha(1f) == Color.white) {
+                print("entered merge white");
                 MapCtrl.mapCtrl.MemGrids();
 
                 MergeSecondBoxToFirst(pos2, pos1, col1, col2);
@@ -179,8 +196,6 @@ public class PlayerCtrl : Block {
             
             
         }
-
-
         return true;
     }
 

@@ -1,27 +1,75 @@
 ﻿using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class MapLoader : MonoBehaviour
-{
+public class MapLoader : MonoBehaviour {
+    public bool isPlayMode;
+    public int currentLevelNum;
+    
+    public string currentLevelName;
+    public TMP_Text levelNameText;
+    
+    public MapCtrl mapTemplate;
+    public MapCtrl map;
+    
     public TextAsset mapData;
     public TextAsset[] mapList;
-    
-    public MapCtrl blankMap;
     
     public WallCtrl wallPrefab;
     public BoxCtrl boxPrefab;
     public PlayerCtrl playerPrefab;
 
-    void Start()
+    void Awake()
     {
-        if (mapData != null)
-        {
-            ParseMapData(mapData.text);
+        if (isPlayMode) {
+            LoadCurrentLevel();
         }
-        else
-        {
-            Debug.LogError("Map data is not assigned.");
+    }
+    public void LoadCurrentLevel() {
+        mapData = mapList[currentLevelNum];
+        ParseMapData(mapData.text);
+        
+        currentLevelName= mapList[currentLevelNum].name;
+        levelNameText.text = currentLevelName;
+    }
+    
+    public void LoadNextLevel() {
+        currentLevelNum++;
+        if (currentLevelNum >= mapList.Length) {
+            currentLevelNum = 0;
+        }
+        LoadCurrentLevel();
+    }
+    
+    public void LoadPrevLevel() {
+        currentLevelNum--;
+        if (currentLevelNum < 0) {
+            currentLevelNum = mapList.Length - 1;
+        }
+        LoadCurrentLevel();
+    }
+
+    public bool CheckLevelComplete() {
+        for (int i = 0; i < map.mapSize.x; i++) {
+            for(int j = 0; j < map.mapSize.y; j++) {
+                if (map.ColorTags[i, j] != Color.clear){
+                    if (map.Objects[i, j] == null || map.ColorTags[i, j] != map.Objects[i, j].color) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    private void Update() {
+        if (isPlayMode) {
+            if (CheckLevelComplete() || Input.GetKeyDown(KeyCode.F)) {
+                LoadNextLevel();
+                
+            }
         }
     }
 
@@ -33,6 +81,17 @@ public class MapLoader : MonoBehaviour
         string[] size = lines[0].Split(' ');
         int width = int.Parse(size[0]);
         int height = int.Parse(size[1]);
+
+        Debug.Log(width + " " + height);
+        if(map != null) {
+            Destroy(map.gameObject);
+            Debug.Log("Destroy map");
+        }
+        map = Instantiate(mapTemplate, transform);
+        map.InitWithSize(width, height);
+        
+        Camera.main.transform.position
+            = new Vector3((width + height) / 4f, (width + height) / 4f, -10);
         //Debug.Log("Map size: " + width + "x" + height);
         
 
@@ -86,6 +145,7 @@ public class MapLoader : MonoBehaviour
             }
             //Debug.Log($"Block {newBlock} created at ({x}, {y})");
             if (blockType == BlockType.Empty) continue;
+            newBlock.transform.SetParent(map.transform);
             MapCtrl.mapCtrl.SetObjectToGrid(new Vector2Int(x, y),newBlock);
             
                 

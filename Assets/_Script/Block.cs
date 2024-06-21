@@ -28,21 +28,7 @@ public class Block : MonoBehaviour {
         spriteRenderer.color = c;
     }
 
-    // public void UndoAction() {
-    //     if (HistoryPos.Count <= 1) { return; }
-    //     
-    //     pos = HistoryPos[^2].pos;
-    //     tarPos = new Vector3(pos.x, pos.y, 0);
-    //     color = HistoryPos[^2].color;
-    //     
-    //     var time = HistoryPos[^2].time;
-    //     foreach (var b in BoxCtrl.boxList) {
-    //         if(b.HistoryPos[^2].time == time) b.UndoAction(time);
-    //     }
-    //     
-    //     MapCtrl.mapCtrl.SetObjectToGrid(HistoryPos[^1].pos, null);
-    //     MapCtrl.mapCtrl.SetObjectToGrid(pos, this);
-    //     HistoryPos.RemoveAt(HistoryPos.Count - 1);
-    //     
-    // }
+    private void OnDestroy() {
+        //Debug.Log("Destroy Block type " + type + " at " + pos);
+    }
 }
