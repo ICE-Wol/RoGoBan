@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using _Scripts.Tools;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class PlayerCtrl : Block {
     public List<(int,float)> actionList = new List<(int,float)>();
     public float tolerateTime = 2f;
     
+    public Sprite normalSprite;
+    public Sprite yinyangSprite;
+    
     
     public Vector2Int[] dirVector = 
     {
@@ -21,17 +25,70 @@ public class PlayerCtrl : Block {
         new Vector2Int(0, 1),
     };
 
-    public int GetInput() {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-            return 0;
-        } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-            return 1;
-        } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-            return 2;
-        } else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-            return 3;
-        } else {
-            return -1;
+    float[] timers = new float[4]; 
+    public void GetInput() {
+
+        for (int i = 0; i < timers.Length; i++) {
+            timers[i] += Time.deltaTime;
+        }
+        
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+            if (timers[0] > 0.15f) {
+                actionList.Add((0,Time.time));
+                timers[0] = 0;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) {
+            timers[0] = 0;
+        }
+
+        // 检测S或下箭头键
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            if (timers[1] > 0.15f)
+            {
+                actionList.Add((1, Time.time));
+                timers[1] = 0;
+            }
+        }
+
+        // 检测S或下箭头键松开
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            timers[1] = 0;
+        }
+
+        // 检测D或右箭头键
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            if (timers[2] > 0.15f)
+            {
+                actionList.Add((2, Time.time));
+                timers[2] = 0;
+            }
+        }
+
+        // 检测D或右箭头键松开
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            timers[2] = 0;
+        }
+
+        // 检测W或上箭头键
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            if (timers[3] > 0.15f)
+            {
+                actionList.Add((3, Time.time));
+                timers[3] = 0;
+            }
+        }
+
+        // 检测W或上箭头键松开
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            timers[3] = 0;
         }
     }
 
@@ -94,7 +151,8 @@ public class PlayerCtrl : Block {
             //机制1.5 混合成白色(黑白不算互补色,不能混合成白色(机制3中和 黑白变阴阳色)
             if ((col1 + col2).SetAlpha(1f) == Color.white &&
                 ((col1 != Color.white && col2 != Color.black)
-                && (col1 != Color.black && col2 != Color.white))) {
+                && (col1 != Color.black && col2 != Color.white))
+                && (col1 != Color.gray && col2 != Color.gray)) {
                 print("entered merge white");
                 MapCtrl.mapCtrl.MemGrids();
 
@@ -297,9 +355,16 @@ public class PlayerCtrl : Block {
 
     public bool isMoving => !transform.position.Equal(tarPos,0.01f);
     private void Update() {
+        spriteRenderer.color = color;
+        if (color == Color.gray) {
+            spriteRenderer.sprite = yinyangSprite;
+            spriteRenderer.color = Color.white;
+        }else if(spriteRenderer.sprite) {
+            spriteRenderer.sprite = normalSprite;
+        }
         
         if (isMoving) {
-            transform.position = transform.position.ApproachValue(tarPos, 8f);
+            transform.position = transform.position.ApproachValue(tarPos, 8f * Vector3.one, 0.01f);
         }
         else {
             if (actionList.Count > 0) {
@@ -310,8 +375,6 @@ public class PlayerCtrl : Block {
             }
         }
 
-        int dir = GetInput();
-        if(dir == -1) return;
-        actionList.Add((dir,Time.time));
+        GetInput();
     }
 }

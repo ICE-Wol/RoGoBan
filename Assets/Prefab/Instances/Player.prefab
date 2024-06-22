@@ -140,8 +140,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   pos: {x: 0, y: 0}
   tarPos: {x: 0, y: 0, z: 0}
-  blockType: 3
   tolerateTime: 2
+  normalSprite: {fileID: 891294444441771028, guid: 370d16b6e1413c34a8b769d16be9cdaa, type: 3}
+  yinyangSprite: {fileID: -395269125709504209, guid: 2a2bd5396c0e67147a637f022641b515, type: 3}
   dirVector:
   - {x: -1, y: 0}
   - {x: 0, y: -1}
