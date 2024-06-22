@@ -20,6 +20,7 @@ public class MapLoader : MonoBehaviour {
     public WallCtrl wallPrefab;
     public BoxCtrl boxPrefab;
     public PlayerCtrl playerPrefab;
+    public LCBannerCtrl bannerCtrl;
 
     void Awake()
     {
@@ -67,8 +68,13 @@ public class MapLoader : MonoBehaviour {
     private void Update() {
         if (isPlayMode) {
             if (CheckLevelComplete() || Input.GetKeyDown(KeyCode.F)) {
-                LoadNextLevel();
-                
+                //var LCBanner = Instantiate(bannerCtrl, transform);
+                //StartCoroutine(LCBanner.ShowBanner());
+                //if (Input.anyKeyDown) {
+                    LoadNextLevel();
+                    //StartCoroutine(LCBanner.HideBanner());
+                //}
+
             }
         }
     }

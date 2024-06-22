@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 public class BoxCtrl : Block {
     public static List<BoxCtrl> boxList = new List<BoxCtrl>();
     
+    public Sprite normalBoxSprite;
+    public Sprite yinyangBoxSprite;
+    
     public Vector2Int[] dirVector = 
     {
         new Vector2Int(-1, 0),
@@ -29,6 +32,13 @@ public class BoxCtrl : Block {
 
     private void Update() {
         spriteRenderer.color = color;
+        if (color == Color.gray) {
+            spriteRenderer.sprite = yinyangBoxSprite;
+            spriteRenderer.color = Color.white;
+        }else if(spriteRenderer.sprite) {
+            spriteRenderer.sprite = normalBoxSprite;
+        }
+        
         if (!transform.position.Equal(tarPos, 0.01f)) {
             transform.position = transform.position.ApproachValue(tarPos, 16f);
         }

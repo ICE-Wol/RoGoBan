@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: 097723465cbcc42429a3dec060eb7a20
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6231208809019032242
+    second: LCBanner_0
+  - first:
+      213: -8684345844253437833
+    second: LCBanner_1
+  - first:
+      213: 9062956336615755157
+    second: LCBanner_2
+  - first:
+      213: 7810666748727077515
+    second: LCBanner_3
+  - first:
+      213: 6800117387639985176
+    second: LCBanner_4
+  - first:
+      213: -1276816864777213924
+    second: LCBanner_5
+  - first:
+      213: -2533138319256133856
+    second: LCBanner_6
+  - first:
+      213: 2449153915705928440
+    second: LCBanner_7
+  - first:
+      213: 2573048909818245742
+    second: LCBanner_8
+  - first:
+      213: -5907243655491891513
+    second: LCBanner_9
+  - first:
+      213: -6382540112770998551
+    second: LCBanner_10
+  - first:
+      213: -6070172716707113990
+    second: LCBanner_11
+  - first:
+      213: 8278208011428798504
+    second: LCBanner_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LCBanner_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 60
+        width: 84
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b4e260df5bd8f4b85370806c76c632
+      internalID: -440809986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 60
+        width: 84
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703a15fb0f083254d910494bf6dc8e63
+      internalID: 117399269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 60
+        width: 70
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d91cac9184d854caeacb7db397a854
+      internalID: -397639103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 60
+        width: 84
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa9bdcd9e7c2640adf51f023e6e75b
+      internalID: 427714546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 60
+        width: 28
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9491779e52c413c4aa64a5b9dd7055eb
+      internalID: 1944870639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_5
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 60
+        width: 84
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94251da0e61ded4480dbcc0c532f1c2
+      internalID: -166313494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 60
+        width: 85
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69d2706bb5ec834ba56187fb22111a0
+      internalID: -577698863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 60
+        width: 99
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585b20143ec583d449a872ff2cd9dd43
+      internalID: -2055624684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_8
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 60
+        width: 84
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6685c29fb2d1e346ac2a7a8dcf4fe2f
+      internalID: -2018011917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_9
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 60
+        width: 29
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3014a5acc59b241b5e53e44f3af359
+      internalID: -1564784874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_10
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 60
+        width: 84
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292ceaea2947ae64ba66b9fc868d36dd
+      internalID: -678879873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_11
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 60
+        width: 85
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c683030cc8233894a8724f73d2c59695
+      internalID: -1193963937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LCBanner_12
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 60
+        width: 85
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b46a642304de748b3e97d04b0bce70
+      internalID: -1972549336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1e848cdd9bb1f714ea5c15de361f0cae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LCBanner_0: -440809986
+      LCBanner_1: 117399269
+      LCBanner_10: -678879873
+      LCBanner_11: -1193963937
+      LCBanner_12: -1972549336
+      LCBanner_2: -397639103
+      LCBanner_3: 427714546
+      LCBanner_4: 1944870639
+      LCBanner_5: -166313494
+      LCBanner_6: -577698863
+      LCBanner_7: -2055624684
+      LCBanner_8: -2018011917
+      LCBanner_9: -1564784874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -91,8 +91,10 @@ public class PlayerCtrl : Block {
                 return true;
             }
             
-            //机制1.5 混合成白色
-            if ((col1 + col2).SetAlpha(1f) == Color.white) {
+            //机制1.5 混合成白色(黑白不算互补色,不能混合成白色(机制3中和 黑白变阴阳色)
+            if ((col1 + col2).SetAlpha(1f) == Color.white &&
+                ((col1 != Color.white && col2 != Color.black)
+                && (col1 != Color.black && col2 != Color.white))) {
                 print("entered merge white");
                 MapCtrl.mapCtrl.MemGrids();
 
