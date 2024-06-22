@@ -107,9 +107,6 @@ public class MapLoader : MonoBehaviour {
 
         map = Instantiate(mapTemplate, transform);
         map.InitWithSize(width, height);
-
-        Camera.main.transform.position
-            = new Vector3((width + height) / 4f, (width + height) / 4f, -10);
         //Debug.Log("Map size: " + width + "x" + height);
 
         // 读取地图数据
@@ -169,6 +166,13 @@ public class MapLoader : MonoBehaviour {
             MapCtrl.mapCtrl.SetObjectToGrid(new Vector2Int(x, y), newBlock);
 
         }
+        
+        //MapCtrl.mapCtrl.Grids[]
+        float centerX = width / 2f - 0.5f;
+        float centerY = height / 2f - 0.5f;
+        Camera.main.transform.position
+            = new Vector3(centerX, centerY + 1f, -10f);
+        
         map.MemGrids();
 
     }
