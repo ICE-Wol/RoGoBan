@@ -4,6 +4,7 @@ using System.IO;
 using _Scripts.Tools;
 using TMPro;
 using Unity.Collections;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -150,8 +151,10 @@ public class MapCtrl : MonoBehaviour {
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
                 tempGrid[i, j] = Objects[i, j];
-                if(Objects[i, j] != null)
+                if (Objects[i, j] != null) {
                     tempColor[i, j] = Objects[i, j].color;
+                    if (tempColor[i, j].a == 0) Debug.Log("Alpha 0");
+                }
             }
         }
         HistoryList.Add((tempGrid, tempColor));
@@ -164,8 +167,8 @@ public class MapCtrl : MonoBehaviour {
                 return;
             }
             //print(HistoryList.Count);
-            Objects = HistoryList[^1].Item1;
-            var colors = HistoryList[^1].Item2;
+            Objects = HistoryList[^1].Item1.Clone() as Block[,];
+            var colors = HistoryList[^1].Item2.Clone() as Color[,];
             
             
             HistoryList.RemoveAt(HistoryList.Count - 1);
@@ -187,10 +190,35 @@ public class MapCtrl : MonoBehaviour {
             
         }
     }
-    
 
-    
-    
+    public void SetBlocksFromInitHistory() {
+        if (HistoryList.Count == 0) {
+            print("No History!");
+            return;
+        }
+
+        Objects = HistoryList[0].Item1.Clone() as Block[,];
+        var colors = HistoryList[0].Item2.Clone() as Color[,];
+
+        for (int i = 0; i < mapSize.x; i++) {
+            for (int j = 0; j < mapSize.y; j++) {
+                if (Objects[i, j] != null) {
+                    if (!Objects[i, j].gameObject.activeSelf) {
+                        Objects[i, j].gameObject.SetActive(true);
+                    }
+
+                    Objects[i, j].pos = new Vector2Int(i, j);
+                    Objects[i, j].tarPos = new Vector3(i, j, 0);
+                    Objects[i, j].SetColor(colors[i, j]);
+                    SetObjectToGrid(Objects[i, j].pos, Objects[i, j]);
+                }
+            }
+        }
+    }
+
+
+
+
     private void Update() {
         SetBlocksColorInGrid();
         SetBlocksFromHistory();
@@ -276,6 +304,6 @@ public class MapCtrl : MonoBehaviour {
         if (mapCtrl == this) {
             mapCtrl = null;
         }
-        print("Destroy MapCtrl!");
+        //print("Destroy MapCtrl!");
     }
 }
