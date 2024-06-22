@@ -6,38 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GlowLineMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GlowLineMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GlowLineShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GlowLineShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/地板.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/地板.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/墙.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/墙.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/目标点.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/目标点.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/眼睛.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/眼睛.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变_动画.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子_灰度渐变_动画.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子or玩家外框.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/箱子or玩家外框.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/色光三原色.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/色光三原色.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/阴阳箱.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/阴阳箱.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/阴阳箱动画.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/阴阳箱动画.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PKBannerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PKBannerCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +149,7 @@
       <workItem from="1718952388130" duration="9396000" />
       <workItem from="1718966297902" duration="1319000" />
       <workItem from="1719035303466" duration="11606000" />
+      <workItem from="1719048058077" duration="3671000" />
     </task>
     <servers />
   </component>

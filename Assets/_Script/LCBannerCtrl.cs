@@ -23,7 +23,7 @@ public class LCBannerCtrl : MonoBehaviour
 
     public float charInterval;
     public bool isBannerShowed;
-    public GameObject pkBanner;
+    public PKBannerCtrl pkBanner;
     private void Start() {
         chars = new SpriteRenderer[bannerSprites.Length];
         charTargetPos = new Vector3[bannerSprites.Length];
@@ -62,7 +62,8 @@ public class LCBannerCtrl : MonoBehaviour
 
 
     public IEnumerator ShowBanner() {
-        pkBanner.SetActive(true);
+        //Debug.Log("Show Banner");
+        pkBanner.gameObject.SetActive(true);
         isBannerShowed = true;
         for (int i = 0; i < chars.Length; i++) {
             isFollowing[i] = true;
@@ -74,12 +75,23 @@ public class LCBannerCtrl : MonoBehaviour
     public IEnumerator HideBanner()
     {
         isBannerShowed = false;
+        pkBanner.isFading = true;
         for (int i = 0; i < chars.Length; i++) {
             isFollowing[i] = false;
             isLeaving[i] = true;
             yield return new WaitForSeconds(0.1f);
         }
-
         yield return new WaitForSeconds(1f);
+        ResetBanner();
+    }
+    
+    public void ResetBanner() {
+        pkBanner.ResetBanner();
+        pkBanner.gameObject.SetActive(false);
+        for (int i = 0; i < chars.Length; i++) {
+            isFollowing[i] = false;
+            isLeaving[i] = false;
+            chars[i].transform.localPosition = new Vector3(i * charInterval, 10, 0);
+        }
     }
 }

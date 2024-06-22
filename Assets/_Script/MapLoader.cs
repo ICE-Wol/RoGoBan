@@ -67,15 +67,19 @@ public class MapLoader : MonoBehaviour {
 
     private void Update() {
         if (isPlayMode) {
-            if (CheckLevelComplete() || Input.GetKeyDown(KeyCode.F)) {
-                //var LCBanner = Instantiate(bannerCtrl, transform);
-                //StartCoroutine(LCBanner.ShowBanner());
-                //if (Input.anyKeyDown) {
+            if (CheckLevelComplete()) {
+                StartCoroutine(bannerCtrl.ShowBanner());
+                if (Input.anyKeyDown) {
                     LoadNextLevel();
-                    //StartCoroutine(LCBanner.HideBanner());
-                //}
-
+                    StartCoroutine(bannerCtrl.HideBanner());
+                }
             }
+            if (Input.GetKeyDown(KeyCode.P)) 
+                LoadPrevLevel();
+            if (Input.GetKeyDown(KeyCode.R)) 
+                LoadCurrentLevel(); 
+            if (Input.GetKeyDown(KeyCode.N)) 
+                LoadNextLevel();
         }
     }
 
@@ -100,7 +104,6 @@ public class MapLoader : MonoBehaviour {
             = new Vector3((width + height) / 4f, (width + height) / 4f, -10);
         //Debug.Log("Map size: " + width + "x" + height);
         
-
         // 读取地图数据
         for (int i = 1; i < lines.Length; i++) {
             string[] lineData = lines[i].Trim().Split(' ');
