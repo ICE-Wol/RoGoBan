@@ -370,6 +370,8 @@ public class PlayerCtrl : Block {
             leftEye.color = Color.black;
             rightEye.color = Color.white;
             
+            
+            
         }else if(spriteRenderer.sprite) {
             spriteRenderer.sprite = normalSprite;
         }

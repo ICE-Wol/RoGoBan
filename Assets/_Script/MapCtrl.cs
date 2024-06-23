@@ -160,14 +160,13 @@ public class MapCtrl : MonoBehaviour {
         HistoryList.Add((tempGrid, tempColor));
     }
 
-    public void PrintGrid()
-    {
+    public void PrintGrid() {
         Debug.Log("Print Grid");
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {
                 if (Objects[i, j] != null) {
                     if(Objects[i, j].type == BlockType.Wall) continue;
-                    Debug.Log(Objects[i, j].pos + " " + 
+                    Debug.Log(i + " " + j + ""  + Objects[i, j].pos + " " + 
                               Objects[i, j].type + " " + 
                               ColorToEnum(Objects[i, j].color));
                 }
@@ -181,16 +180,26 @@ public class MapCtrl : MonoBehaviour {
                 print("No History!");
                 return;
             }
-            //print(HistoryList.Count);
+            
             Objects = HistoryList[^1].Item1.Clone() as Block[,];
             var colors = HistoryList[^1].Item2.Clone() as Color[,];
             PrintGrid();
+            print('z');
             
             HistoryList.RemoveAt(HistoryList.Count - 1);
+            
+            // 枚举所有方块,把他们关掉
+            // 只重新激活需要的方块
+            // 例如被合并后消失的方块不需要激活
+            foreach (var b in BoxCtrl.boxList) {
+                b.gameObject.SetActive(false);
+            }
             
             for (int i = 0; i < mapSize.x; i++) {
                 for (int j = 0; j < mapSize.y; j++) {
                     if (Objects[i, j] != null) {
+                        
+                        // 把没激活, 但是记录了的方块激活
                         if (!Objects[i, j].gameObject.activeSelf) {
                             Objects[i, j].gameObject.SetActive(true);
                         }
@@ -215,7 +224,9 @@ public class MapCtrl : MonoBehaviour {
 
         Objects = HistoryList[0].Item1.Clone() as Block[,];
         var colors = HistoryList[0].Item2.Clone() as Color[,];
+        
         PrintGrid();
+        print('r');
         //HistoryList.Clear();
 
         for (int i = 0; i < mapSize.x; i++) {
