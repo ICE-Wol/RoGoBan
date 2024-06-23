@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
-using _Scripts.Tools;
-using NUnit.Framework;
+﻿using _Scripts.Tools;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PKBannerCtrl : MonoBehaviour {
+public class PKBannerTitleCtrl : MonoBehaviour {
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer glowRenderer;
 
@@ -16,6 +14,7 @@ public class PKBannerCtrl : MonoBehaviour {
         isAppearing = true;
         spriteRenderer.color = spriteRenderer.color.SetAlpha(0);
         glowRenderer.color = glowRenderer.color.SetAlpha(0);
+        Application.targetFrameRate = 90;
     }
 
     public void ResetBanner() {
@@ -35,7 +34,9 @@ public class PKBannerCtrl : MonoBehaviour {
             }
         }
         
-        //is fading 控制在LCBannerCtrl里
+        if(Input.anyKeyDown) isFading = true;
+        if(spriteRenderer.color.a.Equal(0f, 0.01f)) 
+            SceneManager.LoadScene(1);
 
         if (!isFading && !isAppearing)
             glowRenderer.color = glowRenderer.color.SetAlpha((Mathf.Sin(Time.time - baseTime - Mathf.PI /2f) + 1f) / 3f);

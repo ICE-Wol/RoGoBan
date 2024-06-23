@@ -5,9 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBoxLine.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBoxLine.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxLineCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxLineCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Character.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Character.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Empty.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Empty.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Tag.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Tag.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LCBanner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LCBanner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MapCtrl.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MapCtrl.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/LCBanner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/LCBanner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBanner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBanner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBannerGlow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBannerGlow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/地板.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/地板.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/墙.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/墙.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/目标点.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/目标点.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/眼睛.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/眼睛.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变_动画.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变_动画.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子or玩家外框.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子or玩家外框.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/色光三原色.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/色光三原色.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱动画.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱动画.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Box.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Empty.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Player.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Wall.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +98,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/115020c87b4d466480ac50278aa0bdef1ed600/5f/1f295fde/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,33 +117,37 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2huSWN3k7JXz6cJ4ajWOkQjOcgi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.41339156&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.41339156",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "http.proxy",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\11920\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\11920\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\11920\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\11920\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\11920\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\11920\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editor\6000.0.0f1c2\Editor\Unity.exe" />
@@ -124,10 +207,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8568">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31320">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8568" />
+      <option name="pid" value="31320" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -180,6 +263,9 @@
       <workItem from="1719069031714" duration="389000" />
       <workItem from="1719108502787" duration="2000" />
       <workItem from="1719110444962" duration="10050000" />
+      <workItem from="1719130656981" duration="2842000" />
+      <workItem from="1719134479353" duration="4670000" />
+      <workItem from="1719146346447" duration="6721000" />
     </task>
     <servers />
   </component>
@@ -194,6 +280,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">

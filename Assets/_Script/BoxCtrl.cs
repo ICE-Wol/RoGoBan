@@ -40,7 +40,7 @@ public class BoxCtrl : Block {
         }
         
         if (!transform.position.Equal(tarPos, 0.01f)) {
-            transform.position = transform.position.ApproachValue(tarPos, 16f);
+            transform.position = transform.position.ApproachValue(tarPos, 8f);
         }
     }
 }

@@ -359,7 +359,7 @@ public class PlayerCtrl : Block {
     public bool isEyeColorReverse = false;
     public SpriteRenderer leftEye;
     public SpriteRenderer rightEye;
-    public bool isMoving => !transform.position.Equal(tarPos,0.01f);
+    public bool isMoving => !transform.position.Equal(tarPos,0.05f);
     private void Update() {
         spriteRenderer.color = color;
         leftEye .color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
@@ -378,7 +378,7 @@ public class PlayerCtrl : Block {
         
         
         if (isMoving) {
-            transform.position = transform.position.ApproachValue(tarPos, 8f * Vector3.one, 0.01f);
+            transform.position = transform.position.ApproachValue(tarPos, 6f * Vector3.one, 0.01f);
         }
         else {
             if (actionList.Count > 0) {
