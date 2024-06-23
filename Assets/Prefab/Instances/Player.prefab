@@ -148,6 +148,9 @@ MonoBehaviour:
   - {x: 0, y: -1}
   - {x: 1, y: 0}
   - {x: 0, y: 1}
+  isEyeColorReverse: 0
+  leftEye: {fileID: 2413764415321045476}
+  rightEye: {fileID: 7847483285385068858}
 --- !u!212 &7081256721624608540
 SpriteRenderer:
   m_ObjectHideFlags: 0

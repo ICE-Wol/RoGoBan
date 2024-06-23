@@ -51,7 +51,6 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   pos: {x: 0, y: 0}
   tarPos: {x: 0, y: 0, z: 0}
-  blockType: 0
 --- !u!212 &6746427993201622403
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,6 +6,15 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 public class MapLoader : MonoBehaviour {
+    public static MapLoader mapLoader;
+    private void Awake() {
+        if (!mapLoader) {
+            mapLoader = this;
+        }
+        else {
+            Destroy(gameObject);
+        }
+    }
     public bool isPlayMode;
     public int currentLevelNum;
 
@@ -23,7 +32,7 @@ public class MapLoader : MonoBehaviour {
     public PlayerCtrl playerPrefab;
     public LCBannerCtrl bannerCtrl;
 
-    void Awake() {
+    void Start() {
         if (isPlayMode) {
             LoadCurrentLevel();
         }
@@ -59,7 +68,7 @@ public class MapLoader : MonoBehaviour {
         for (int i = 0; i < map.mapSize.x; i++) {
             for (int j = 0; j < map.mapSize.y; j++) {
                 if (map.ColorTags[i, j] != Color.clear) {
-                    if (map.Objects[i, j] == null || map.ColorTags[i, j] != map.Objects[i, j].color) {
+                    if (!map.Objects[i, j] || map.ColorTags[i, j] != map.Objects[i, j].color) {
                         return false;
                     }
                 }

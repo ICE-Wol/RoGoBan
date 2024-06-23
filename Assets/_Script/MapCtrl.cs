@@ -159,6 +159,21 @@ public class MapCtrl : MonoBehaviour {
         }
         HistoryList.Add((tempGrid, tempColor));
     }
+
+    public void PrintGrid()
+    {
+        Debug.Log("Print Grid");
+        for (int i = 0; i < mapSize.x; i++) {
+            for (int j = 0; j < mapSize.y; j++) {
+                if (Objects[i, j] != null) {
+                    if(Objects[i, j].type == BlockType.Wall) continue;
+                    Debug.Log(Objects[i, j].pos + " " + 
+                              Objects[i, j].type + " " + 
+                              ColorToEnum(Objects[i, j].color));
+                }
+            }
+        }
+    }
     
     public void SetBlocksFromHistory() {
         if (Input.GetKeyDown(KeyCode.Z)) {
@@ -169,7 +184,7 @@ public class MapCtrl : MonoBehaviour {
             //print(HistoryList.Count);
             Objects = HistoryList[^1].Item1.Clone() as Block[,];
             var colors = HistoryList[^1].Item2.Clone() as Color[,];
-            
+            PrintGrid();
             
             HistoryList.RemoveAt(HistoryList.Count - 1);
             
@@ -192,6 +207,7 @@ public class MapCtrl : MonoBehaviour {
     }
 
     public void SetBlocksFromInitHistory() {
+        //MemGrids();
         if (HistoryList.Count == 0) {
             print("No History!");
             return;
@@ -199,6 +215,8 @@ public class MapCtrl : MonoBehaviour {
 
         Objects = HistoryList[0].Item1.Clone() as Block[,];
         var colors = HistoryList[0].Item2.Clone() as Color[,];
+        PrintGrid();
+        //HistoryList.Clear();
 
         for (int i = 0; i < mapSize.x; i++) {
             for (int j = 0; j < mapSize.y; j++) {

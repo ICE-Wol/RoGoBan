@@ -355,15 +355,25 @@ public class PlayerCtrl : Block {
         return true;
     }
 
+    
+    public bool isEyeColorReverse = false;
+    public SpriteRenderer leftEye;
+    public SpriteRenderer rightEye;
     public bool isMoving => !transform.position.Equal(tarPos,0.01f);
     private void Update() {
         spriteRenderer.color = color;
+        leftEye .color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
+        rightEye.color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
         if (color == Color.gray) {
             spriteRenderer.sprite = yinyangSprite;
             spriteRenderer.color = Color.white;
+            leftEye.color = Color.black;
+            rightEye.color = Color.white;
+            
         }else if(spriteRenderer.sprite) {
             spriteRenderer.sprite = normalSprite;
         }
+        
         
         if (isMoving) {
             transform.position = transform.position.ApproachValue(tarPos, 8f * Vector3.one, 0.01f);
@@ -377,6 +387,6 @@ public class PlayerCtrl : Block {
             }
         }
 
-        GetInput();
+        if(!MapLoader.mapLoader.CheckLevelComplete()) GetInput();
     }
 }

@@ -62,10 +62,6 @@ public class ColorPicker : MonoBehaviour {
         Color.white,
     };
     
-    public enum MyEnum {
-        
-    }
-    
     public SpriteRenderer colorBlock;
     public List<SpriteRenderer> colorBlockList;
     
