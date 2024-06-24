@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class PlayerCtrl : Block {
     public List<(int,float)> actionList = new List<(int,float)>();
-    public float tolerateTime = 2f;
+    public float tolerateTime = 1f;
     
     public Sprite normalSprite;
     public Sprite yinyangSprite;

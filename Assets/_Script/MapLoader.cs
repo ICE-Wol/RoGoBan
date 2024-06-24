@@ -38,10 +38,11 @@ public class MapLoader : MonoBehaviour {
         }
         
         PlayerPrefs.SetInt("MaxLevelNum", mapList.Length);
+        currentLevelNum = PlayerPrefs.GetInt("LevelIndex", 0);
     }
 
     public void LoadCurrentLevel() {
-        currentLevelNum = PlayerPrefs.GetInt("LevelIndex", 0);
+        
         mapData = mapList[currentLevelNum];
         ParseMapData(mapData.text);
 
