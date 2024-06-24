@@ -5,89 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBoxLine.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBoxLine.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxLineCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxLineCtrl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Character.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Character.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GridTemplate.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Box.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Empty.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Empty.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Tag.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Tag.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Wall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Instances/Wall.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LCBanner.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LCBanner.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MapCtrl.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MapCtrl.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SelectionPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/LCBanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/LCBanner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBanner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBannerGlow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Banner/PKBannerGlow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/地板.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/地板.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/墙.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/墙.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/目标点.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/目标点.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/眼睛.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/眼睛.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变_动画.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子_灰度渐变_动画.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子or玩家外框.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/箱子or玩家外框.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/色光三原色.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/色光三原色.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱动画.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block/阴阳箱动画.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Box.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Box.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Empty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Empty.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Player.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Player.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Wall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PlaceHolder/Wall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "http.proxy",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -207,10 +130,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31320">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="31320" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -266,6 +189,8 @@
       <workItem from="1719130656981" duration="2842000" />
       <workItem from="1719134479353" duration="4670000" />
       <workItem from="1719146346447" duration="6721000" />
+      <workItem from="1719191539499" duration="8020000" />
+      <workItem from="1719211466415" duration="5279000" />
     </task>
     <servers />
   </component>
