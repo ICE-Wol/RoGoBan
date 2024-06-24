@@ -114,6 +114,8 @@ public class LevelSelectCtrl : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+    
+    
 
     private void Update()
     {

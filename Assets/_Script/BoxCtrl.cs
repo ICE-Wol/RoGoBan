@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class BoxCtrl : Block {
-    public static List<BoxCtrl> boxList = new List<BoxCtrl>();
     
     public Sprite normalBoxSprite;
     public Sprite yinyangBoxSprite;
@@ -24,8 +23,8 @@ public class BoxCtrl : Block {
         MapCtrl.mapCtrl.SetObjectToGrid(pos + dirVector[dir], this); 
     }
     
-    private void Start() {
-        boxList.Add(this);
+    protected new void Start() {
+        base.Start();
         spriteRenderer.color = ColorPicker.colorPicker.curColor;
     }
 

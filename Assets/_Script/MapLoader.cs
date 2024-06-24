@@ -118,7 +118,7 @@ public class MapLoader : MonoBehaviour {
             //Debug.Log("Destroy map");
         }
         
-        BoxCtrl.boxList.Clear();
+        // Block.blockList.Clear();
 
         map = Instantiate(mapTemplate, transform);
         map.InitWithSize(width, height);

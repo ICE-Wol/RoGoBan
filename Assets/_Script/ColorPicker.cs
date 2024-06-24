@@ -127,7 +127,6 @@ public class ColorPicker : MonoBehaviour {
         return Color.clear;
     }
 
-
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             var color = GetColorByMouse();
@@ -135,7 +134,7 @@ public class ColorPicker : MonoBehaviour {
                 curColor = color;
                 //Debug.Log("Color: " + color);
             }else {
-                //Debug.Log("No Color");
+                //.Log("No Color");
             }
         }
     }

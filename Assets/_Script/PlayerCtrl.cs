@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class PlayerCtrl : Block {
     public List<(int,float)> actionList = new List<(int,float)>();
-    public float tolerateTime = 1f;
+    public float tolerateTime = 0.15f;
     
     public Sprite normalSprite;
     public Sprite yinyangSprite;
@@ -250,7 +250,7 @@ public class PlayerCtrl : Block {
                 MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
                 
                 PushLineOfBoxes(dir, i);
-                MovePlayer(targetPos);
+                //MovePlayer(targetPos);
                 
                 return true;
             }

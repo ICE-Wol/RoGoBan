@@ -75,6 +75,7 @@ namespace _Scripts.Tools {
         public static float ApproachValue(this float current, float target, float rate) {
             if (Mathf.Abs(current - target) >= Epsilon) {
                 current -= (current - target) / rate;
+                //current = (target - current) * Mathf.Exp(Time.deltaTime) + current;
             }
             else {
                 current = target;

@@ -26,6 +26,8 @@ public class BoxCircle : MonoBehaviour
             box.transform.localScale = Vector3.one * scale;
             box.circleHeart = this;
             boxes[i] = box;
+            box.index = i;
+            box.boxSum = num;
         }
     }
     

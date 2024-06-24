@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5877043984006208660}
   - component: {fileID: 5820391889161892496}
   - component: {fileID: 8469186983833077609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DecoBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -8539871364200462878, guid: 07bb3182181fdb548a117e0c05f1b3f8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,3 +103,5 @@ MonoBehaviour:
   circleHeart: {fileID: 0}
   curHeight: 0
   tarHeight: 0
+  index: 0
+  boxSum: 0

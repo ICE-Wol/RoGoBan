@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class Block : MonoBehaviour {
+    public static List<Block> blockList = new List<Block>();
+    
     public BlockType type;
     public SpriteRenderer spriteRenderer;
     public bool isTemplate;
@@ -17,7 +20,9 @@ public class Block : MonoBehaviour {
     /// </summary>
     public Vector3 tarPos;
 
-    private void Start() {
+    protected void Start() {
+        if(type != BlockType.Empty) 
+            blockList.Add(this);
         spriteRenderer = GetComponent<SpriteRenderer>();
         if(!isTemplate)
             spriteRenderer.color = color;
@@ -28,7 +33,7 @@ public class Block : MonoBehaviour {
         spriteRenderer.color = c;
     }
 
-    private void OnDestroy() {
-        //Debug.Log("Destroy Block type " + type + " at " + pos);
+    protected void OnDestroy() {
+        blockList.Remove(this);
     }
 }

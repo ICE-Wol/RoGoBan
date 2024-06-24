@@ -14,7 +14,7 @@ public class PKBannerTitleCtrl : MonoBehaviour {
         isAppearing = true;
         spriteRenderer.color = spriteRenderer.color.SetAlpha(0);
         glowRenderer.color = glowRenderer.color.SetAlpha(0);
-        Application.targetFrameRate = 90;
+        //Application.targetFrameRate = 90;
     }
 
     public void ResetBanner() {

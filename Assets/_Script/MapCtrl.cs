@@ -191,7 +191,7 @@ public class MapCtrl : MonoBehaviour {
             // 枚举所有方块,把他们关掉
             // 只重新激活需要的方块
             // 例如被合并后消失的方块不需要激活
-            foreach (var b in BoxCtrl.boxList) {
+            foreach (var b in Block.blockList) {
                 b.gameObject.SetActive(false);
             }
             

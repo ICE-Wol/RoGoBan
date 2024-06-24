@@ -11,15 +11,18 @@ namespace _Script
         public float curHeight;
         public float tarHeight;
 
+        public float index;
+        public float boxSum;
+
         private void Start()
         {
             tarHeight = 15f;
         }
 
-        private void Update()
-        {
+        private void Update() {
             curHeight.ApproachRef(tarHeight, 16f);
-            if (Input.anyKeyDown) tarHeight *= -1f;
+            tarHeight = 15f * Mathf.Sin(Time.time / 2f + (index * 2f / boxSum * 2f * Mathf.PI));
+            //if (Input.anyKeyDown) tarHeight *= -1f;
             //else tarHeight = 15f;
             
             // 计算从当前对象到目标对象的方向
