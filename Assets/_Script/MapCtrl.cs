@@ -31,8 +31,7 @@ public enum ColorType{
 
 public class MapCtrl : MonoBehaviour {
     public static MapCtrl mapCtrl;
-
-    public bool isInited;
+    
     private void Awake() {
         mapCtrl = this;
     }
@@ -62,6 +61,7 @@ public class MapCtrl : MonoBehaviour {
     public SpriteRenderer[,] Grids;
     public Color[,] ColorTags;
     public Block[,] Objects;
+    
     
     public List<(Block[,],Color[,])> HistoryList;
 

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Color playerColor;
     public int levelSelectedIndex;
     void Start()
     {

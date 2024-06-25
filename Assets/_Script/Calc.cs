@@ -95,6 +95,17 @@ namespace _Scripts.Tools {
             return current;
         }
         
+        public static Color ApproachValue(this Color current, Color target, float rate)
+        {
+            float r = ApproachValue(current.r, target.r, rate);
+            float g = ApproachValue(current.g, target.g, rate);
+            float b = ApproachValue(current.b, target.b, rate);
+            float a = ApproachValue(current.a, target.a, rate);
+
+            return new Color(r, g, b, a);
+        }
+        
+        
         public static Vector3 ApproachValue(this Vector3 current, Vector3 target, Vector3 rate) {
             current.x = ApproachValue(current.x, target.x, rate.x);
             current.y = ApproachValue(current.y, target.y, rate.y);

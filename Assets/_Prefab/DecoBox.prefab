@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleHeart: {fileID: 0}
+  spriteRenderer: {fileID: 5820391889161892496}
   curHeight: 0
   tarHeight: 0
   index: 0

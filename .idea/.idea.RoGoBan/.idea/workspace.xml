@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Calc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Calc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +199,7 @@
       <workItem from="1719230423597" duration="7159000" />
       <workItem from="1719276342191" duration="8609000" />
       <workItem from="1719298629919" duration="502000" />
+      <workItem from="1719300106686" duration="2218000" />
     </task>
     <servers />
   </component>
@@ -229,26 +236,13 @@
           <line>245</line>
           <properties documentPath="E:\Unity\Project\RoGoBan\Assets\_Script\MapCtrl.cs" containingFunctionPresentation="Method 'SetBlocksFromInitHistory'">
             <startOffsets>
-              <option value="7838" />
+              <option value="7821" />
             </startOffsets>
             <endOffsets>
-              <option value="7839" />
+              <option value="7822" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Script/MapCtrl.cs</url>
-          <line>197</line>
-          <properties documentPath="E:\Unity\Project\RoGoBan\Assets\_Script\MapCtrl.cs" containingFunctionPresentation="Method 'SetBlocksFromHistory'">
-            <startOffsets>
-              <option value="6113" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6148" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,6 +7,8 @@ namespace _Script
     public class DecoBoxCircleCtrl : MonoBehaviour
     {
         public BoxCircle circleHeart;
+        
+        public SpriteRenderer spriteRenderer;
 
         public float curHeight;
         public float tarHeight;
@@ -20,6 +22,10 @@ namespace _Script
         }
 
         private void Update() {
+            spriteRenderer.color =
+                spriteRenderer.color.ApproachValue
+                    (GameManager.Manager.playerColor.SetAlpha(0.3f), 16f);
+            
             curHeight.ApproachRef(tarHeight, 16f);
             tarHeight = 15f * Mathf.Sin(Time.time / 2f + (index * 2f / boxSum * 2f * Mathf.PI));
             //if (Input.anyKeyDown) tarHeight *= -1f;
