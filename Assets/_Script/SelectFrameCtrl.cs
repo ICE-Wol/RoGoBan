@@ -5,13 +5,14 @@ using UnityEngine;
 public class SelectFrameCtrl : MonoBehaviour
 {
     public float scale;
+    public float sinDivider = 1f;
     public float basicOffset = 2f;
     public float speedMultiplier = 2f;
     public float scaleXMultiplier = 1f;
     public float scaleYMultiplier = 1f;
 
     private void Update() {
-        scale = basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time));
+        scale = basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time))/sinDivider;
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             scaleXMultiplier *= -1;
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))

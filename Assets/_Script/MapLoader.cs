@@ -34,15 +34,15 @@ public class MapLoader : MonoBehaviour {
 
     void Start() {
         if (isPlayMode) {
+            //PlayerPrefs.SetInt("MaxLevelNum", mapList.Length);
+            //currentLevelNum = PlayerPrefs.GetInt("LevelIndex", 0);
+            
             LoadCurrentLevel();
         }
-        
-        PlayerPrefs.SetInt("MaxLevelNum", mapList.Length);
-        currentLevelNum = PlayerPrefs.GetInt("LevelIndex", 0);
     }
 
     public void LoadCurrentLevel() {
-        
+        currentLevelNum = GameManager.Manager.levelSelectedIndex;
         mapData = mapList[currentLevelNum];
         ParseMapData(mapData.text);
 

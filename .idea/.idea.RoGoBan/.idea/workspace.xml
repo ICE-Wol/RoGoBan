@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/MatCircleDeco.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MatCircleDeco.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MatCircleDeco.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MatCircleDeco.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectFrameCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectFrameCtrl.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/Calc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Calc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/ColorPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ColorPicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PKBannerTitleCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,10 +139,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6480">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="6480" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -211,6 +202,7 @@
       <workItem from="1719211466415" duration="6787000" />
       <workItem from="1719218426780" duration="2780000" />
       <workItem from="1719230423597" duration="7159000" />
+      <workItem from="1719276342191" duration="7304000" />
     </task>
     <servers />
   </component>

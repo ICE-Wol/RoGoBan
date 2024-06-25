@@ -33,7 +33,9 @@ public class LevelSelectCtrl : MonoBehaviour
     
     public int curLevelIndex = 0;
     public SelectFrameCtrl selectFrameCtrl;
-
+    
+    public Transform levelTitle;
+    public bool isOnTitle;
     private void GenerateLevelTags() {
         var maxLevelNum = levelSets[curLevelSetIndex].LevelNum;
         
@@ -53,51 +55,71 @@ public class LevelSelectCtrl : MonoBehaviour
 
     public void SetCurLevelSetIndex()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            curLevelSetIndex--;
-            if (curLevelSetIndex < 0)
-                curLevelSetIndex = levelSets.Length - 1;
-            for(int i = 0; i < levelTags.Length; i++)
-                Destroy(levelTags[i].gameObject);
-            isLevelGenerated = false;
+        if (isOnTitle) {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+                curLevelSetIndex--;
+                if (curLevelSetIndex < 0)
+                    curLevelSetIndex = levelSets.Length - 1;
+                for (int i = 0; i < levelTags.Length; i++)
+                    Destroy(levelTags[i].gameObject);
+                isLevelGenerated = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.D)) {
+                curLevelSetIndex++;
+                if (curLevelSetIndex >= levelSets.Length)
+                    curLevelSetIndex = 0;
+                for (int i = 0; i < levelTags.Length; i++)
+                    Destroy(levelTags[i].gameObject);
+                isLevelGenerated = false;
+            }
         }
-        else if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            curLevelSetIndex++;
-            if (curLevelSetIndex >= levelSets.Length)
-                curLevelSetIndex = 0;
-            for(int i = 0; i < levelTags.Length; i++)
-                Destroy(levelTags[i].gameObject);
-            isLevelGenerated = false;
-        }
-        
+
     }
 
     public void SetLevelIndex() {
-        if (Input.GetKeyDown(KeyCode.A)) {
-            curLevelIndex--;
-            if (curLevelIndex < 0)
-                curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
-        } 
-        if (Input.GetKeyDown(KeyCode.D)) {
-            curLevelIndex++;
-            if (curLevelIndex >= levelSets[curLevelSetIndex].LevelNum)
-                curLevelIndex = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.W)) {
-            if(curLevelIndex - numPerRow >= 0)
-                curLevelIndex -= numPerRow;
-        }
-        if (Input.GetKeyDown(KeyCode.S)) {
-            if(curLevelIndex + numPerRow < levelSets[curLevelSetIndex].LevelNum)
-                curLevelIndex += numPerRow;
+        if (!isOnTitle) {
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                curLevelIndex--;
+                if (curLevelIndex < 0)
+                    curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                curLevelIndex++;
+                if (curLevelIndex >= levelSets[curLevelSetIndex].LevelNum)
+                    curLevelIndex = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.UpArrow)) {
+                if (curLevelIndex - numPerRow >= 0)
+                    curLevelIndex -= numPerRow;
+            }
+
+            if (Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.DownArrow)) {
+                if (curLevelIndex + numPerRow < levelSets[curLevelSetIndex].LevelNum)
+                    curLevelIndex += numPerRow;
+            }
         }
 
-        selectFrameCtrl.transform.position = 
-            selectFrameCtrl.transform.position.ApproachValue
-            (levelTags[curLevelIndex].transform.position,
-            8f);
+        if (curLevelIndex < 6 && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            isOnTitle = true;
+        } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            isOnTitle = false;
+            if(curLevelIndex >= levelSets[curLevelSetIndex].LevelNum)
+                curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
+        }
+
+        if (isOnTitle) {
+            selectFrameCtrl.transform.position =
+                selectFrameCtrl.transform.position.ApproachValue
+                    (levelTitle.position, 8f);
+        }
+        else {
+            selectFrameCtrl.transform.position =
+                selectFrameCtrl.transform.position.ApproachValue
+                    (levelTags[curLevelIndex].transform.position, 8f);
+        }
+        
     }
     
     public int GetTotLevelIndex() {
@@ -110,7 +132,8 @@ public class LevelSelectCtrl : MonoBehaviour
     public void EnterLevel() {
         if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
-            PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
+            GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
+            //PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
             SceneManager.LoadScene(2);
         }
     }
@@ -126,20 +149,52 @@ public class LevelSelectCtrl : MonoBehaviour
         
         SetCurLevelSetIndex();
         SetLevelIndex();
-        EnterLevel();
+        if(!isOnTitle) EnterLevel();
         
         
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(0))
         {
+            if (mousePosition.y > 2f) {
+                if (mousePosition.x < 0f) {
+                    curLevelSetIndex--;
+                    if (curLevelSetIndex < 0)
+                        curLevelSetIndex = levelSets.Length - 1;
+                    for(int i = 0; i < levelTags.Length; i++)
+                        Destroy(levelTags[i].gameObject);
+                    isLevelGenerated = false;
+                }
+                else {
+                    curLevelSetIndex++;
+                    if (curLevelSetIndex >= levelSets.Length)
+                        curLevelSetIndex = 0;
+                    for(int i = 0; i < levelTags.Length; i++)
+                        Destroy(levelTags[i].gameObject);
+                    isLevelGenerated = false;
+                }
+            }
+            
             // 发射射线
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 
             // 检测是否击中了物体
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.name);
-                // 在此处可以执行其他逻辑，例如与物体交互
+                for(int i = 0; i < levelTags.Length; i++)
+                {
+                    if (hit.collider.gameObject == levelTags[i].gameObject)
+                    {
+                        curLevelIndex = i;
+                        selectFrameCtrl.transform.position = 
+                            selectFrameCtrl.transform.position.ApproachValue
+                            (levelTags[curLevelIndex].transform.position,
+                                8f);
+                        //PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
+                        GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
+                        print(GetTotLevelIndex());
+                        SceneManager.LoadScene(2);
+                    }
+                }
             }
         }
         else
