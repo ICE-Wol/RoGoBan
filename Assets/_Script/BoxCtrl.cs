@@ -29,8 +29,9 @@ public class BoxCtrl : Block {
     }
 
 
-    private void Update() {
-        spriteRenderer.color = color;
+    protected void Update() {
+        base.Update();
+        //spriteRenderer.color = color;
         if (color == Color.gray) {
             spriteRenderer.sprite = yinyangBoxSprite;
             spriteRenderer.color = Color.white;

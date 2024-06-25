@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _Scripts.Tools;
 using Unity.Collections;
 using UnityEngine;
 
@@ -24,13 +25,16 @@ public class Block : MonoBehaviour {
         if(type != BlockType.Empty) 
             blockList.Add(this);
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if(!isTemplate)
-            spriteRenderer.color = color;
     }
 
     public void SetColor(Color c) {
         color = c;
-        spriteRenderer.color = c;
+        //spriteRenderer.color = c;
+    }
+
+    protected void Update() {
+        if(!isTemplate) spriteRenderer.color = 
+            spriteRenderer.color.ApproachValue(color, 16f);
     }
 
     protected void OnDestroy() {

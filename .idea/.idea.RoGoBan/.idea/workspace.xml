@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/Calc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Calc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/DecoBoxCircleCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +196,7 @@
       <workItem from="1719276342191" duration="8609000" />
       <workItem from="1719298629919" duration="502000" />
       <workItem from="1719300106686" duration="2218000" />
+      <workItem from="1719303946094" duration="753000" />
     </task>
     <servers />
   </component>

@@ -363,8 +363,9 @@ public class PlayerCtrl : Block {
     public SpriteRenderer leftEye;
     public SpriteRenderer rightEye;
     public bool isMoving => !transform.position.Equal(tarPos,0.05f);
-    private void Update() {
-        spriteRenderer.color = color;
+    protected void Update() {
+        base.Update();
+        //spriteRenderer.color = color;
         GameManager.Manager.playerColor = color;
         leftEye .color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
         rightEye.color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
