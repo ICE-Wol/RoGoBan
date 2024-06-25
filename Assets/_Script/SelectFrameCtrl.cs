@@ -12,10 +12,12 @@ public class SelectFrameCtrl : MonoBehaviour
     public float scaleYMultiplier = 1f;
 
     private void Update() {
-        scale = basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time))/sinDivider;
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        scale = basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time)) / sinDivider;
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             scaleXMultiplier *= -1;
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) ||
+            Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             scaleYMultiplier *= -1;
         transform.localScale = transform.localScale.ApproachValue(
             new Vector3(scale * scaleXMultiplier, scale * scaleYMultiplier, 1), 8f);

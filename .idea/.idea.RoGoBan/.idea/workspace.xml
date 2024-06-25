@@ -7,17 +7,9 @@
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MatCircleDeco.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MatCircleDeco.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTCircleDeco.renderTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelectScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectFrameCtrl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectFrameCtrl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/SelectFrameCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SelectFrameCtrl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +194,7 @@
       <workItem from="1719211466415" duration="6787000" />
       <workItem from="1719218426780" duration="2780000" />
       <workItem from="1719230423597" duration="7159000" />
-      <workItem from="1719276342191" duration="7304000" />
+      <workItem from="1719276342191" duration="8609000" />
     </task>
     <servers />
   </component>
