@@ -250,7 +250,10 @@ public class PlayerCtrl : Block {
                 MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
                 
                 PushLineOfBoxes(dir, i);
-                //MovePlayer(targetPos);
+                if(box1.type == BlockType.Player || box2.type == BlockType.Player) {
+                    return true;
+                }
+                MovePlayer(targetPos);
                 
                 return true;
             }
