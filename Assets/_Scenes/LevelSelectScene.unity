@@ -1074,9 +1074,9 @@ MonoBehaviour:
   - LevelName: Transfer
     LevelNum: 5
   - LevelName: Player
-    LevelNum: 6
+    LevelNum: 7
   - LevelName: Neutralize
-    LevelNum: 5
+    LevelNum: 8
   - LevelName: Burst
     LevelNum: 4
   curLevelSetIndex: 0

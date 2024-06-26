@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f9f012746f9ec4d8580ed2c16da36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleTemplate: {fileID: 0}
+  particleTemplate: {fileID: 6397586079645458329, guid: 9552b85f5aa95f74abd699a116de5aa3, type: 3}
   timer: 0
   genInterval: 30
   genCount: 3
+  genColor: {r: 0, g: 0, b: 0, a: 0}
