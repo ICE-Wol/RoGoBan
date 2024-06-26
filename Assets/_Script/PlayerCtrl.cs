@@ -217,6 +217,7 @@ public class PlayerCtrl : Block {
                 box1.SetColor(newColor);
                 
                 box2.gameObject.SetActive(false);
+                
                 MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
                 
                 PushLineOfBoxes(dir, i + 1);
