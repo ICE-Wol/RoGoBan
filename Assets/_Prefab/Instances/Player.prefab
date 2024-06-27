@@ -150,7 +150,7 @@ MonoBehaviour:
   - {x: 0, y: -1}
   - {x: 1, y: 0}
   - {x: 0, y: 1}
-  curDir: 0
+  curDir: -1
   isEyeColorReverse: 0
   leftEye: {fileID: 2413764415321045476}
   rightEye: {fileID: 7847483285385068858}
@@ -231,9 +231,15 @@ MonoBehaviour:
   eyeFloatMag: 0.05
   eyeFloatSpeed: 2
   eyeFloatBase: 0.05
-  eyeOffsetY: 0
+  eyeFlipMultiplier: 1
+  eyeFlipTimer: 0
+  eyeFlipTime: 0
+  curEyeOffsetY: 0
+  tarEyeOffsetY: 0
   tarEyeOffset: {x: 0, y: 0}
   curEyeOffset: {x: 0, y: 0}
+  curScaleY: 0
+  tarScaleY: 2
   dirVector:
   - {x: -1, y: 0}
   - {x: 0, y: -1}

@@ -20,7 +20,7 @@ public class PlayerCtrl : Block {
         new Vector2Int(0, 1),
     };
     
-    public int curDir = 0;
+    public int curDir = -1;
 
     float[] timers = new float[4]; 
     public void GetInput() {
