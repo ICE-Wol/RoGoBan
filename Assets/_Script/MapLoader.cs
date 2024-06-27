@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class MapLoader : MonoBehaviour {
     public static MapLoader mapLoader;
@@ -51,7 +48,9 @@ public class MapLoader : MonoBehaviour {
     }
 
     public void LoadCurrentLevel() {
-        Destroy(curHintObject.gameObject);
+        #region bugRegion
+        if (curHintObject != null)
+            Destroy(curHintObject.gameObject);
         switch (currentLevelNum) {
             case 0:
                 curHintObject = hintObjects[0];
@@ -69,7 +68,7 @@ public class MapLoader : MonoBehaviour {
 
         if (currentLevelNum == 0 || currentLevelNum == 1 || currentLevelNum == 2 || currentLevelNum == 7)
             curHintObject = Instantiate(curHintObject, new Vector3(-4, 5, 0), Quaternion.identity);
-        
+        #endregion
         // for (int i = 0; i < hintObjects.Length; i++) {
         //     hintObjects[i].SetActive(false);
         // }

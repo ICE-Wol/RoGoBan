@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/CircleDecoCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/CircleDecoCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CircleDecoCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CircleDecoCtrl.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +95,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RoGoBan/Game\RoGoBan.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RoGoBan/Temp\RoGoBan.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\11920\Desktop\RoGoBan" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -202,7 +206,7 @@
       <workItem from="1719365669058" duration="5608000" />
       <workItem from="1719450735256" duration="4394000" />
       <workItem from="1719456745482" duration="318000" />
-      <workItem from="1719471283237" duration="2017000" />
+      <workItem from="1719471283237" duration="3826000" />
     </task>
     <servers />
   </component>
