@@ -1,10 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.CompilerServices;
-using System.Threading;
 using _Scripts.Tools;
-using JetBrains.Annotations;
 using UnityEngine;
 
 
@@ -24,6 +19,8 @@ public class PlayerCtrl : Block {
         new Vector2Int(1, 0),
         new Vector2Int(0, 1),
     };
+    
+    public int curDir = 0;
 
     float[] timers = new float[4]; 
     public void GetInput() {
@@ -367,7 +364,8 @@ public class PlayerCtrl : Block {
     protected void Update() {
         base.Update();
         //spriteRenderer.color = color;
-        GameManager.Manager.playerColor = color;
+        if (GameManager.Manager != null)
+            GameManager.Manager.playerColor = color;
         leftEye .color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
         rightEye.color = isEyeColorReverse ? (Color.white-color).SetAlpha(1f) : color;
         if (color == Color.gray) {
@@ -375,9 +373,6 @@ public class PlayerCtrl : Block {
             spriteRenderer.color = Color.white;
             leftEye.color = Color.black;
             rightEye.color = Color.white;
-            
-            
-            
         }else if(spriteRenderer.sprite) {
             spriteRenderer.sprite = normalSprite;
         }
@@ -390,6 +385,7 @@ public class PlayerCtrl : Block {
             if (actionList.Count > 0) {
                 if (Time.time - actionList[0].Item2 <= tolerateTime) {
                     Move(actionList[0].Item1);
+                    curDir = actionList[0].Item1;
                 }
                 actionList.RemoveAt(0);
             }

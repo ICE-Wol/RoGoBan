@@ -20,7 +20,10 @@ public class ParticleGenerator : MonoBehaviour
     private void Update() {
         if (timer % genInterval == 0) {
             for (int i = 0; i < genCount; i++) {
-                GenerateParticle(transform.position, GameManager.Manager.playerColor);
+                if(GameManager.Manager != null)
+                    GenerateParticle(transform.position, GameManager.Manager.playerColor);
+                else 
+                    GenerateParticle(transform.position, Color.white);
             }
         }
         
