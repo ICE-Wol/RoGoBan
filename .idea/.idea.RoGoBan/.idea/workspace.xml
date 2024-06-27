@@ -7,16 +7,10 @@
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleCtrl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleCtrl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleGenerator.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Instances/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Instances/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ParticleGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticleGenerator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ParticlePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticlePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +199,10 @@
       <workItem from="1719298629919" duration="502000" />
       <workItem from="1719300106686" duration="2218000" />
       <workItem from="1719303946094" duration="2393000" />
-      <workItem from="1719365669058" duration="5313000" />
+      <workItem from="1719365669058" duration="5608000" />
+      <workItem from="1719450735256" duration="4394000" />
+      <workItem from="1719456745482" duration="318000" />
+      <workItem from="1719471283237" duration="2017000" />
     </task>
     <servers />
   </component>

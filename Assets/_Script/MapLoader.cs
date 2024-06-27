@@ -31,13 +31,17 @@ public class MapLoader : MonoBehaviour {
     public BoxCtrl boxPrefab;
     public PlayerCtrl playerPrefab;
     public LCBannerCtrl bannerCtrl;
+    
+    public GameObject[] hintObjects;
+    public GameObject curHintObject;
 
     void Start() {
         if (isPlayMode) {
             //PlayerPrefs.SetInt("MaxLevelNum", mapList.Length);
             //currentLevelNum = PlayerPrefs.GetInt("LevelIndex", 0);
-            
-            LoadLevelFromLevelSelect(GameManager.Manager.levelSelectedIndex);
+            if(GameManager.Manager == null)
+                LoadCurrentLevel();
+            else LoadLevelFromLevelSelect(GameManager.Manager.levelSelectedIndex);
         }
     }
     
@@ -47,6 +51,30 @@ public class MapLoader : MonoBehaviour {
     }
 
     public void LoadCurrentLevel() {
+        Destroy(curHintObject.gameObject);
+        switch (currentLevelNum) {
+            case 0:
+                curHintObject = hintObjects[0];
+                break;
+            case 1:
+                curHintObject = hintObjects[1];
+                break;
+            case 2:
+                curHintObject = hintObjects[1];
+                break;
+            case 7:
+                curHintObject = hintObjects[2];
+                break;
+        }
+
+        if (currentLevelNum == 0 || currentLevelNum == 1 || currentLevelNum == 2 || currentLevelNum == 7)
+            curHintObject = Instantiate(curHintObject, new Vector3(-4, 5, 0), Quaternion.identity);
+        
+        // for (int i = 0; i < hintObjects.Length; i++) {
+        //     hintObjects[i].SetActive(false);
+        // }
+        // curHintObject.SetActive(true);
+        
         mapData = mapList[currentLevelNum];
         ParseMapData(mapData.text);
 
