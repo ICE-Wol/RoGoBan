@@ -51,14 +51,12 @@ public class PlayerAnim : MonoBehaviour
             if(eyeBackTimer > 3f) {
                 curDir = -1;
                 playerCtrl.curDir = -1;
+                
             }
         }
         curDir = playerCtrl.curDir;
         
         
-        
-        
-
         eyeFlipTime += Time.deltaTime;
         if (eyeFlipTime > eyeFlipTimer) {
             eyeFlipTime = 0;
@@ -74,7 +72,14 @@ public class PlayerAnim : MonoBehaviour
         curScaleY.ApproachRef(tarScaleY, 16f);
 
         if (curDir == -1) {
-            tarEyeOffset = Vector2.zero;
+            
+            if((eyeBackTimer % 3f).Equal(1.5f,0.01f)) {
+                tarEyeOffset = 0.1f * Random.Range(0f, 360f).Deg2Dir();
+                //print("Set Eye Offset Left");
+            }
+            if((eyeBackTimer % 3f) < 1.5f){
+                tarEyeOffset = Vector2.zero;
+            }
         }
         else {
             tarEyeOffset = 0.1f * (Vector2)dirVector[curDir];
