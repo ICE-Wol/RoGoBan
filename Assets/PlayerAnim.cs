@@ -19,8 +19,8 @@ public class PlayerAnim : MonoBehaviour
     [FormerlySerializedAs("eyeFlipTimer")] public float eyeFlickTimer;
     [FormerlySerializedAs("eyeFlipTime")] public float eyeFlickTime;
     
-    public float curEyeOffsetY;
-    public float tarEyeOffsetY;
+    //public float curEyeOffsetY;
+    //public float tarEyeOffsetY;
     public Vector2 tarEyeOffset;
     public Vector2 curEyeOffset;
 
@@ -100,8 +100,8 @@ public class PlayerAnim : MonoBehaviour
             tarEyeScaleY *= -1f;
         }
         curEyeScaleY.ApproachRef(tarEyeScaleY, 16f);
-        tarEyeOffsetY = eyeFlickMultiplier * (eyeFloatMag * Mathf.Sin(Time.time * eyeFloatSpeed) + eyeFloatBase);
-        curEyeOffsetY.ApproachRef(tarEyeOffsetY, 16f);
+        //tarEyeOffsetY = eyeFlickMultiplier * (eyeFloatMag * Mathf.Sin(Time.time * eyeFloatSpeed) + eyeFloatBase);
+        //curEyeOffsetY.ApproachRef(tarEyeOffsetY, 16f);
 
         //眼睛移动
         if (curDir == -1) {
@@ -118,8 +118,8 @@ public class PlayerAnim : MonoBehaviour
         }
         curEyeOffset = curEyeOffset.ApproachValue(tarEyeOffset, 16f);
         
-        eyes[0].transform.localPosition = new Vector3( initEyeOffsetX, curEyeOffsetY, 0) + (Vector3)curEyeOffset;
-        eyes[1].transform.localPosition = new Vector3(-initEyeOffsetX, curEyeOffsetY, 0) + (Vector3)curEyeOffset;
+        eyes[0].transform.localPosition = new Vector3( initEyeOffsetX, 0.05f/*curEyeOffsetY*/, 0) + (Vector3)curEyeOffset;
+        eyes[1].transform.localPosition = new Vector3(-initEyeOffsetX, 0.05f/*curEyeOffsetY*/, 0) + (Vector3)curEyeOffset;
         eyes[0].transform.localScale = new Vector3(1, curEyeScaleY, 1);
         eyes[1].transform.localScale = new Vector3(1, curEyeScaleY, 1);
     }

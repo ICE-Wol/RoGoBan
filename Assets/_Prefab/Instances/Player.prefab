@@ -228,18 +228,25 @@ MonoBehaviour:
   - {fileID: 7847483285385068858}
   curDir: 0
   initEyeOffsetX: 0.15
-  eyeFloatMag: 0.05
+  eyeFloatMag: 0
   eyeFloatSpeed: 2
   eyeFloatBase: 0.05
-  eyeFlipMultiplier: 1
-  eyeFlipTimer: 0
-  eyeFlipTime: 0
+  eyeFlickMultiplier: 1
+  eyeFlickTimer: 0
+  eyeFlickTime: 0
   curEyeOffsetY: 0
   tarEyeOffsetY: 0
   tarEyeOffset: {x: 0, y: 0}
   curEyeOffset: {x: 0, y: 0}
-  curScaleY: 0
-  tarScaleY: 2
+  curEyeScaleY: 0
+  tarEyeScaleY: 2
+  bodyWriggleTimer: 0
+  bodyWriggleSpdMul: 20
+  curBodyScaleY: 0
+  tarBodyScaleY: 0
+  curBodyScaleX: 0
+  tarBodyScaleX: 0
+  eyeBackTimer: 0
   dirVector:
   - {x: -1, y: 0}
   - {x: 0, y: -1}

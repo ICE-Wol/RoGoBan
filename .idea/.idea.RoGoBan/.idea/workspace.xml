@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerAnim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAnim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Instances/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Instances/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +206,7 @@
       <workItem from="1719539075749" duration="3324000" />
       <workItem from="1719542460519" duration="2152000" />
       <workItem from="1719544732445" duration="107000" />
+      <workItem from="1719559829348" duration="653000" />
     </task>
     <servers />
   </component>
