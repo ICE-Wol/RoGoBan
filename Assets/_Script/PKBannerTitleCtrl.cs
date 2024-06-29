@@ -35,8 +35,8 @@ public class PKBannerTitleCtrl : MonoBehaviour {
         }
         
         if(Input.anyKeyDown) isFading = true;
-        if(spriteRenderer.color.a.Equal(0f, 0.01f)) 
-            SceneManager.LoadScene(1);
+        //if(spriteRenderer.color.a.Equal(0f, 0.01f)) 
+        //    SceneManager.LoadScene(1);
 
         if (!isFading && !isAppearing)
             glowRenderer.color = glowRenderer.color.SetAlpha((Mathf.Sin(Time.time - baseTime - Mathf.PI /2f) + 1f) / 3f);

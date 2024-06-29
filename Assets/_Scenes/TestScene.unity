@@ -326,7 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630645937218361468, guid: 56405119bb73b7a43a48d612cc0cf223, type: 3}
       propertyPath: m_Name
-      value: ParticleGenerator
+      value: PlayerParticleGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630645937218361468, guid: 56405119bb73b7a43a48d612cc0cf223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

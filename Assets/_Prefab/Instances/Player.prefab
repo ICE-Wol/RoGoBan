@@ -234,8 +234,6 @@ MonoBehaviour:
   eyeFlickMultiplier: 1
   eyeFlickTimer: 0
   eyeFlickTime: 0
-  curEyeOffsetY: 0
-  tarEyeOffsetY: 0
   tarEyeOffset: {x: 0, y: 0}
   curEyeOffset: {x: 0, y: 0}
   curEyeScaleY: 0

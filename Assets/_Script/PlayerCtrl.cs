@@ -371,8 +371,8 @@ public class PlayerCtrl : Block {
         if (color == Color.gray) {
             spriteRenderer.sprite = yinyangSprite;
             spriteRenderer.color = Color.white;
-            leftEye.color = Color.black;
-            rightEye.color = Color.white;
+            leftEye.color = Color.white;
+            rightEye.color = Color.black;
         }else if(spriteRenderer.sprite) {
             spriteRenderer.sprite = normalSprite;
         }
