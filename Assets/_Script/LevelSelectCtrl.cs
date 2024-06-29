@@ -101,7 +101,7 @@ public class LevelSelectCtrl : MonoBehaviour
             }
         }
 
-        if (curLevelIndex < 6 && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (curLevelIndex < 6 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))) {
             isOnTitle = true;
         } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             isOnTitle = false;

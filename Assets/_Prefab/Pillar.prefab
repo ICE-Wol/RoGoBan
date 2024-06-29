@@ -47,5 +47,9 @@ MonoBehaviour:
   blockPrefab: {fileID: 6384936179757081133, guid: c6eb44a88dd9b6c4299a1d505cfa845d, type: 3}
   height: 20
   width: 4
-  initY: 9
+  initY: 10
   finalY: -8
+  initX: 0
+  isActivated: 0
+  isArrived: 0
+  isLeaving: 0

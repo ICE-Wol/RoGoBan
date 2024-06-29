@@ -22,14 +22,28 @@ public class SceneTransitionCtrl : MonoBehaviour
         }
     }
     
-    public IEnumerator ActivatePillar() {
+    public IEnumerator ActivatePillars() {
         for (int i = 0; i < pillarNum; i++) {
             pillars[i].isActivated = true;
             yield return new WaitForSeconds(0.1f);
         }  
     }
     
-    public IEnumerator LeavePillars() {
+    IEnumerator LeavePillars()
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        
         for (int i = 0; i < pillarNum; i++) {
             pillars[i].isLeaving = true;
             yield return new WaitForSeconds(0.1f);
@@ -42,11 +56,12 @@ public class SceneTransitionCtrl : MonoBehaviour
     
     public void Update() {
         if (Input.anyKeyDown) {
-            StartCoroutine(ActivatePillar());
+            StartCoroutine(ActivatePillars());
         }
         
         if(pillars[pillarNum - 1].isArrived && curSceneIndex != 1) {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadSceneAsync(1);
+            //Debug.Break();
             StartCoroutine( LeavePillars());
             curSceneIndex = 1;
         }

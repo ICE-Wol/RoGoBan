@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectFrameCtrl : MonoBehaviour
 {
     public float scale;
+    public float basicMultiplier = 1.5f;
     public float sinDivider = 1f;
     public float basicOffset = 2f;
     public float speedMultiplier = 2f;
@@ -12,7 +13,7 @@ public class SelectFrameCtrl : MonoBehaviour
     public float scaleYMultiplier = 1f;
 
     private void Update() {
-        scale = basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time)) / sinDivider;
+        scale = basicMultiplier * (basicOffset + Mathf.Abs(Mathf.Sin(speedMultiplier * Time.time)) / sinDivider);
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
             Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             scaleXMultiplier *= -1;

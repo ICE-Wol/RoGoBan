@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using Random = UnityEngine.Random;
 
 public enum BlockType{
     Empty,
@@ -253,8 +254,28 @@ public class MapCtrl : MonoBehaviour {
         SetBlocksFromHistory();
         
         SaveMapData();
+        
+        FloatGrids();
     }
 
+    private void Start() {
+        GridsSpd = new float[mapSize.x, mapSize.y];
+        for (int i = 0; i < mapSize.x; i++) {
+            for (int j = 0; j < mapSize.y; j++) {
+                GridsSpd[i, j] = Random.Range(0.1f, 0.5f);
+            }
+        }
+    }
+
+    public float[,] GridsSpd;
+    public void FloatGrids() {
+        for (int i = 0; i < mapSize.x; i++) {
+            for (int j = 0; j < mapSize.y; j++) {
+                Grids[i, j].GetComponent<Block>().tarPos = new Vector3(i, j, GridsSpd[i, j] * Time.time);
+            }
+        }
+    }
+    
     public bool IsPosValid(Vector2Int pos) {
         return pos.x >= 0 && pos.x < mapSize.x && pos.y >= 0 && pos.y < mapSize.y;
     }
