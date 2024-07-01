@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PillarCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PillarCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PillarCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PillarCtrl.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SceneTransitionCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SceneTransitionCtrl.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Pillar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Pillar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/SelectFrameCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SelectFrameCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +222,8 @@
       <workItem from="1719575084942" duration="866000" />
       <workItem from="1719646192035" duration="7973000" />
       <workItem from="1719663147731" duration="2060000" />
+      <workItem from="1719795605512" duration="3043000" />
+      <workItem from="1719798780883" duration="6988000" />
     </task>
     <servers />
   </component>
