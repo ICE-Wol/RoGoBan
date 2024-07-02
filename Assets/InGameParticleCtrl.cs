@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class InGameParticleCtrl : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public Vector3 centerPos;
+    public float radius;
+    
+    public float baseDegree;
+    public float degree;
+    
+    public float floatSpeed; 
+    
+    private void Update() {
+        radius += Time.deltaTime * floatSpeed;
+        degree = baseDegree * Mathf.Sin(Time.time * 2);
+        transform.position = centerPos + new Vector3(
+            Mathf.Cos(Mathf.Deg2Rad * degree) * radius, 
+            Mathf.Sin(Mathf.Deg2Rad * degree) * radius, 0);
     }
 }
