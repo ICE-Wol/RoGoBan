@@ -5,21 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/HintCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HintCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/HintCtrl.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/HintCtrl.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/BoxCircleDecoCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/BoxCircleDecoCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PillarCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PillarCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PillarCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PillarCtrl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SceneTransitionCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneTransitionCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/SceneTransitionCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/DecoBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ParticlePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticlePrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/BoxCircle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/CircleDecoCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ColorHintCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/CircleDecoCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ColorHintCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/Bottom.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +43,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/115020c87b4d466480ac50278aa0bdef1ed600/5f/1f295fde/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ParticleCtrl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,7 +111,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RoGoBan/Game\RoGoBan.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RoGoBan/Temp\RoGoBan.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\11920\Desktop\RoGoBan" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -223,7 +234,12 @@
       <workItem from="1719646192035" duration="7973000" />
       <workItem from="1719663147731" duration="2060000" />
       <workItem from="1719795605512" duration="3043000" />
-      <workItem from="1719798780883" duration="6988000" />
+      <workItem from="1719798780883" duration="9224000" />
+      <workItem from="1719821098768" duration="4502000" />
+      <workItem from="1719836997335" duration="407000" />
+      <workItem from="1719904069493" duration="272000" />
+      <workItem from="1719904355572" duration="7409000" />
+      <workItem from="1719916348451" duration="1988000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ using _Scripts.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CircleDecoCtrl : MonoBehaviour
+public class ColorHintCtrl : MonoBehaviour
 {
     public SpriteRenderer[] circles;
     public Vector3 initPos;
