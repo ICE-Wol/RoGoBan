@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: DownDeco
+    uniqueID: 329576899
+    locked: 0
   - name: Player
     uniqueID: 4202882979
     locked: 0

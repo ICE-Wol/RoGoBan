@@ -9,7 +9,7 @@ public class HintCtrl : MonoBehaviour
     public int hintIndex;
     public SpriteRenderer[] hintObject;
     public float[] hintAlpha;
-    void Start()
+    void Awake()
     {
         hintAlpha = new float[hintObject.Length];
         foreach (var hint in hintObject) {

@@ -5,8 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/InGameParticleManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/InGameParticleManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticleManager.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticleManager.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/HintCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/HintCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/InGameParticleCtrl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/TopCoverCtrl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Script/TopCoverCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HintCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HintCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TopCoverCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TopCoverCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Instances/Tag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Instances/Tag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Particle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +47,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/115020c87b4d466480ac50278aa0bdef1ed600/5f/1f295fde/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/PillarCtrl.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/SceneTransitionCtrl.cs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Tests/Editor/UGUI/EventSystem/EventTriggerRemoveDuringExecution.cs" root0="SKIP_HIGHLIGHTING" />
@@ -33,6 +64,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -216,12 +248,14 @@
       <workItem from="1719904069493" duration="272000" />
       <workItem from="1719904355572" duration="7409000" />
       <workItem from="1719916348451" duration="2770000" />
+      <workItem from="1719928045496" duration="3117000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

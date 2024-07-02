@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 335426077344857742}
   - component: {fileID: 167434336242450290}
   - component: {fileID: 9156017974585674292}
+  - component: {fileID: 8786007772774729539}
   m_Layer: 0
   m_Name: Particle
   m_TagString: Untagged
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -564210143
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 359998337175102873, guid: b263e99ff23954f448869eba1338ace5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,8 +101,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4587762f16296e488b88c30a3189594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 167434336242450290}
+  rotator: {fileID: 8786007772774729539}
   centerPos: {x: 0, y: 0, z: 0}
   radius: 0
-  baseDegree: 0
-  degree: 0
   floatSpeed: 0
+  degree: 0
+  baseDegree: 0
+  degAmplitude: 0
+  spdMultiplier: 0
+  curScale: 0
+  tarScale: 0
+  lifeTimer: 0
+--- !u!114 &8786007772774729539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567223979204218498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1a2153f07ba1f4dacfb14cf2576573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOrbit: 0
+  centerTransform: {fileID: 0}
+  radius: 0
+  isRadiusFloat: 0
+  sinDivider: 2
+  speedDivider: 2
+  orbitMultiplier: 0
+  isRotate: 0
+  initDegree: 0
+  rotateMultiplier: 0

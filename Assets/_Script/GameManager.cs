@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public int levelSelectedIndex;
     public bool isLevelComplete;
     public bool prevLevelComplete;
+
+    public Vector3 cameraPos;
     void Start()
     {
         DontDestroyOnLoad(gameObject);

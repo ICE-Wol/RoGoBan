@@ -218,6 +218,8 @@ public class MapLoader : MonoBehaviour {
         Camera.main.transform.position
             = new Vector3(centerX, centerY + 1f, -10f);
         
+        GameManager.Manager.cameraPos = Camera.main.transform.position;
+        
         map.MemGrids();
 
     }
