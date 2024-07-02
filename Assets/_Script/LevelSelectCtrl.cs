@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -36,6 +34,8 @@ public class LevelSelectCtrl : MonoBehaviour
     
     public Transform levelTitle;
     public bool isOnTitle;
+
+    public GameObject intoLevelTransition;
     private void GenerateLevelTags() {
         var maxLevelNum = levelSets[curLevelSetIndex].LevelNum;
         
@@ -134,7 +134,8 @@ public class LevelSelectCtrl : MonoBehaviour
         {
             GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
             //PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
+            intoLevelTransition.SetActive(true);
         }
     }
     
@@ -194,7 +195,9 @@ public class LevelSelectCtrl : MonoBehaviour
                         //临时，按钮点击音效，临时让manager代播
                         WwiseSoundManager.Instance.PostEvent(WwiseSoundManager.Instance.gameObject, WwiseEventType.UI_Click);
                         print(GetTotLevelIndex());
-                        SceneManager.LoadScene(2);
+                        //SceneManager.LoadScene(2);
+                        intoLevelTransition.SetActive(true);
+                        
                     }
                 }
             }

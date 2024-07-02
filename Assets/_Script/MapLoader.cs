@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
 
@@ -28,9 +30,11 @@ public class MapLoader : MonoBehaviour {
     public BoxCtrl boxPrefab;
     public PlayerCtrl playerPrefab;
     public LCBannerCtrl bannerCtrl;
+    public TopCoverCtrl topCoverCtrl;
     
-    public GameObject[] hintObjects;
-    public GameObject curHintObject;
+    public ColorHintCtrl colorHintCtrl;
+    
+    public HintCtrl hintCtrl;
 
     void Start() {
         if (isPlayMode) {
@@ -48,38 +52,28 @@ public class MapLoader : MonoBehaviour {
     }
 
     public void LoadCurrentLevel() {
-        #region bugRegion
-        if (curHintObject != null)
-            Destroy(curHintObject.gameObject);
-        switch (currentLevelNum) {
-            case 0:
-                curHintObject = hintObjects[0];
-                break;
-            case 1:
-                curHintObject = hintObjects[1];
-                break;
-            case 2:
-                curHintObject = hintObjects[1];
-                break;
-            case 7:
-                curHintObject = hintObjects[2];
-                break;
-        }
-
-        if (currentLevelNum == 0 || currentLevelNum == 1 || currentLevelNum == 2 || currentLevelNum == 7)
-            curHintObject = Instantiate(curHintObject, new Vector3(-4, 5, 0), Quaternion.identity);
-        #endregion
-        // for (int i = 0; i < hintObjects.Length; i++) {
-        //     hintObjects[i].SetActive(false);
-        // }
-        // curHintObject.SetActive(true);
-        
         mapData = mapList[currentLevelNum];
         ParseMapData(mapData.text);
 
         currentLevelName = mapList[currentLevelNum].name;
         levelNameText.text = currentLevelName;
+        
+        switch (currentLevelNum) {
+            case 0:
+                hintCtrl.SetHintIndex(0);
+                break;
+            case 1:
+                hintCtrl.SetHintIndex(1);
+                break;
+            case 7:
+                hintCtrl.SetHintIndex(2);
+                break;
+            default:
+                hintCtrl.SetHintIndex(-1);
+                return;
+        }
     }
+    
 
     public void LoadNextLevel() {
         currentLevelNum++;
@@ -116,10 +110,14 @@ public class MapLoader : MonoBehaviour {
     private void Update() {
         if (isPlayMode) {
             if (CheckLevelComplete()) {
+                topCoverCtrl.OpenTopCover();
                 StartCoroutine(bannerCtrl.ShowBanner());
+                colorHintCtrl.isShowingHint = false;
+                hintCtrl.SetHintIndex(-1);
                 if (Input.anyKeyDown) {
                     LoadNextLevel();
                     StartCoroutine(bannerCtrl.HideBanner());
+                    topCoverCtrl.CloseTopCover();
                 }
             }
 

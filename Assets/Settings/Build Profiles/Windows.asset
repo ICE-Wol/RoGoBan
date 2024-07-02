@@ -22,8 +22,6 @@ MonoBehaviour:
     m_path: Assets/_Scenes/TitleScene.unity
   - m_enabled: 1
     m_path: Assets/_Scenes/LevelSelectScene.unity
-  - m_enabled: 1
-    m_path: Assets/_Scenes/GameScene.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
