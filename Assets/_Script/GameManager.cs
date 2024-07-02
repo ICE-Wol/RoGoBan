@@ -14,12 +14,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public SceneTransitionCtrl trTemplate;
-    public SceneTransitionCtrl tr;
     public Color playerColor;
     public int levelSelectedIndex;
-    public bool isLevelComplete;
-    public bool prevLevelComplete;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -32,15 +28,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             var i = SceneManager.GetActiveScene().buildIndex;
             if (i != 0) {
-                if (i == 1) {
-                    tr = Instantiate(trTemplate);
-                    tr.curSceneIndex = 1;
-                    tr.tarSceneIndex = 0;
-                    StartCoroutine(tr.ActivatePillars());
-                }else if (i == 2) {
-                    SceneManager.LoadScene(1);
-                }
-
+                SceneManager.LoadScene(i - 1);
             }
             else {
 #if UNITY_EDITOR

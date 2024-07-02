@@ -22,7 +22,13 @@ public class PlayerCtrl : Block {
     
     public int curDir = -1;
 
-    float[] timers = new float[4]; 
+    float[] timers = new float[4];
+
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
+    protected override void Start()
+    {
+        base.Start();
+    }
     public void GetInput() {
 
         for (int i = 0; i < timers.Length; i++) {
@@ -101,7 +107,18 @@ public class PlayerCtrl : Block {
                 MapCtrl.mapCtrl.SetObjectToGrid(targetPos, this);
                 pos = targetPos;
                 tarPos = new Vector3(pos.x, pos.y, 0);
-            }else if (targetBlock.type == BlockType.Box) {
+                //播放移动音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Player_SuccessMove);
+                //停止BGM示例(传入wwiseSoundManager_Instance是因为BGM是manager播的)
+                //wwiseSoundManager_Instance.StopEvent(wwiseSoundManager_Instance.gameObject, WwiseEventType.BGM_Start);
+                return;
+            }
+            if (targetBlock.type == BlockType.Wall)
+            {
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Player_FuckWall);
+            }
+            else if (targetBlock.type == BlockType.Box) {
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Player_CannotMove);
                 //if (TryTransitPush(dir, targetPos)) return;  
                 if (TryMergePush(dir, targetPos)) return; 
                 if (TryDirectPush(dir, targetPos)) return;

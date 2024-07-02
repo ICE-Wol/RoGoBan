@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	646571441	Cube_Enter			\Default Work Unit\Cube_Events\Cube_Enter	
+	2254939478	Cube_leave			\Default Work Unit\Cube_Events\Cube_leave	
+	2386042077	Cube_Mix			\Default Work Unit\Cube_Events\Cube_Mix	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	212191083	Cube_Mix	E:\Unity\Projects\Unity\RoGoBan-main4\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\mix1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cube\Cube_Mix		45032
+	566826851	Cube_Enter	E:\Unity\Projects\Unity\RoGoBan-main4\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\方块到达指定位置_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cube\Cube_Enter		83620
+	902245058	Cube_Leave	E:\Unity\Projects\Unity\RoGoBan-main4\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\方块离开指定位置_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cube\Cube_Leave		82832
+

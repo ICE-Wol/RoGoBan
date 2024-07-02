@@ -104,13 +104,12 @@ public class MapLoader : MonoBehaviour {
             for (int j = 0; j < map.mapSize.y; j++) {
                 if (map.ColorTags[i, j] != Color.clear) {
                     if (!map.Objects[i, j] || map.ColorTags[i, j] != map.Objects[i, j].color) {
-                        GameManager.Manager.isLevelComplete = false;
                         return false;
                     }
                 }
             }
         }
-        GameManager.Manager.isLevelComplete = true;
+
         return true;
     }
 

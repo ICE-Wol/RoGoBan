@@ -22,7 +22,8 @@ public class Block : MonoBehaviour {
     /// </summary>
     public Vector3 tarPos;
 
-    protected void Start() {
+    protected virtual void Start()
+    {
         if(type != BlockType.Empty) 
             blockList.Add(this);
         spriteRenderer = GetComponent<SpriteRenderer>();

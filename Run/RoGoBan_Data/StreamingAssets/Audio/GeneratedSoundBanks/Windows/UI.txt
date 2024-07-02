@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2832330782	Choose			\Default Work Unit\UI\Choose	
+	3011204530	Move			\Default Work Unit\UI\Move	
+	4117021394	Enter_Game			\Default Work Unit\UI\Enter_Game	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	207247791	选项切换	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\选项切换_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Move\选项切换		36160
+	286262923	Enter_Game2	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\Enter1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Enter_Game2		370752
+	554909792	Confirm	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\confirm_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Confirm		280496
+
