@@ -21,10 +21,12 @@ public class InGameParticleCtrl : MonoBehaviour
     public float curScale;
     public float tarScale;
 
+    public Color color;
+
     public float lifeTimer;
 
     private void Start() {
-        spriteRenderer.color = GameManager.Manager.playerColor.SetAlpha(0f);
+        color = Color.white.SetAlpha(0f);
         curScale = 0;
         tarScale = Random.Range(0.5f, 1.5f);
         lifeTimer = Random.Range(0f, 6f);
@@ -41,6 +43,9 @@ public class InGameParticleCtrl : MonoBehaviour
     private void Update() {
         centerPos = GameManager.Manager.cameraPos.SetZ(10f);
         
+        color = GameManager.Manager.playerColor;
+        spriteRenderer.color = color.Appear(32f);
+        
         lifeTimer -= Time.deltaTime;
         
         curScale.ApproachRef(tarScale, 128f);
@@ -51,7 +56,7 @@ public class InGameParticleCtrl : MonoBehaviour
                 Destroy(gameObject);
         }
 
-        spriteRenderer.color = spriteRenderer.color.Appear(32f);
+        
         
         radius += Time.deltaTime * floatSpeed;
         degree = baseDegree + degAmplitude * Mathf.Sin(Time.time * spdMultiplier);

@@ -5,36 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/InGameParticleManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InGameParticleManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticleManager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ParticleManager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/HintCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/HintCtrl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/InGameParticleCtrl.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/TopCoverCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Script/TopCoverCtrl.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HintCtrl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HintCtrl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleCtrl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThreeCircleTransist.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TopCoverCtrl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TopCoverCtrl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Instances/Tag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Instances/Tag.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Particle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/InGameParticleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/InGameParticleCtrl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +222,7 @@
       <workItem from="1719904355572" duration="7409000" />
       <workItem from="1719916348451" duration="2770000" />
       <workItem from="1719928045496" duration="3117000" />
+      <workItem from="1719969422541" duration="703000" />
     </task>
     <servers />
   </component>
