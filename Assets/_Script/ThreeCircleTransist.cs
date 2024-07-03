@@ -21,11 +21,19 @@ public class ThreeCircleTransist : MonoBehaviour
             radius += Time.deltaTime;
         }else if (!isShrinking) {
             isShrinking = true;
-            SceneManager.LoadScene(2);
+            if (SceneManager.GetActiveScene().buildIndex == 2) {
+                SceneManager.LoadScene(1);
+            }
+            else {
+                SceneManager.LoadScene(2);
+            }
         }
         if (isShrinking) {
             if(radius > 0f) radius -= Time.deltaTime;
-            else radius = 0f;
+            else {
+                radius = 0f;
+                Destroy(gameObject);
+            }
         }
 
         for (int i = 0; i < circles.Length; i++) {

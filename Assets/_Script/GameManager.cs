@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public Color playerColor;
     public int levelSelectedIndex;
     public bool isLevelComplete;
-    public bool prevLevelComplete;
+    public GameObject outLevelTransition;
 
     public Vector3 cameraPos;
     void Start()
@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour
                     tr.tarSceneIndex = 0;
                     StartCoroutine(tr.ActivatePillars());
                 }else if (i == 2) {
-                    SceneManager.LoadScene(1);
+                    Instantiate(outLevelTransition).SetActive(true);
+                    //Debug.Break();
+                    //SceneManager.LoadScene(1);
                 }
 
             }

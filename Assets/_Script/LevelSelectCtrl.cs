@@ -194,7 +194,8 @@ public class LevelSelectCtrl : MonoBehaviour
                         GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
                         print(GetTotLevelIndex());
                         //SceneManager.LoadScene(2);
-                        intoLevelTransition.SetActive(true);
+                        //intoLevelTransition.SetActive(true);
+                        Instantiate(intoLevelTransition).SetActive(true);
                         
                     }
                 }
