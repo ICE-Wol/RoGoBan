@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerCtrl : Block {
     public List<(int,float)> actionList = new List<(int,float)>();
-    public float tolerateTime = 0.15f;
+    public float tolerateTime;
     
     public Sprite normalSprite;
     public Sprite yinyangSprite;
@@ -361,6 +361,9 @@ public class PlayerCtrl : Block {
     public SpriteRenderer leftEye;
     public SpriteRenderer rightEye;
     public bool isMoving => !transform.position.Equal(tarPos,0.05f);
+
+    public float moveStartTime;
+    public float moveEndTime;
     protected void Update() {
         base.Update();
         //spriteRenderer.color = color;
@@ -379,13 +382,22 @@ public class PlayerCtrl : Block {
         
         
         if (isMoving) {
-            transform.position = transform.position.ApproachValue(tarPos, 6f * Vector3.one, 0.01f);
+            transform.position = transform.position.ApproachValue
+                (tarPos, 6f * Vector3.one, 0.05f);
+            if(transform.position.Equal(tarPos,0.05f)) {
+                moveEndTime = Time.time;
+                Debug.Log(moveStartTime + " " + moveEndTime + "\n" + 
+                          (moveEndTime - moveStartTime));
+            }
         }
         else {
             if (actionList.Count > 0) {
                 if (Time.time - actionList[0].Item2 <= tolerateTime) {
                     Move(actionList[0].Item1);
                     curDir = actionList[0].Item1;
+                    moveStartTime = Time.time;
+                    
+                    
                 }
                 actionList.RemoveAt(0);
             }

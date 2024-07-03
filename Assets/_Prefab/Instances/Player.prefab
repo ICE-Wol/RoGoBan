@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -92084317
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 502865507264097426, guid: 39350ee113e1cbc40ad7dc074e8d4a9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,10 +139,12 @@ MonoBehaviour:
   type: 3
   spriteRenderer: {fileID: 7081256721624608540}
   isTemplate: 0
+  isPlayer: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  oldPos: {x: 0, y: 0}
   pos: {x: 0, y: 0}
   tarPos: {x: 0, y: 0, z: 0}
-  tolerateTime: 2
+  tolerateTime: 0.16
   normalSprite: {fileID: 891294444441771028, guid: 370d16b6e1413c34a8b769d16be9cdaa, type: 3}
   yinyangSprite: {fileID: -395269125709504209, guid: 2a2bd5396c0e67147a637f022641b515, type: 3}
   dirVector:
@@ -154,6 +156,8 @@ MonoBehaviour:
   isEyeColorReverse: 0
   leftEye: {fileID: 2413764415321045476}
   rightEye: {fileID: 7847483285385068858}
+  moveStartTime: 0
+  moveEndTime: 0
 --- !u!212 &7081256721624608540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -196,7 +200,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -92084317
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 891294444441771028, guid: 370d16b6e1413c34a8b769d16be9cdaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -324,7 +328,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -92084317
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 502865507264097426, guid: 39350ee113e1cbc40ad7dc074e8d4a9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
