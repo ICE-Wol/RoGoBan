@@ -1,13 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using _Scripts.Tools;
-using TMPro;
-using Unity.Collections;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public enum BlockType{

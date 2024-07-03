@@ -11,13 +11,13 @@ public class TopCoverCtrl : MonoBehaviour
     public void OpenTopCover() {
         isTopCoverOpen = true;
         tarAlpha = 1.0f;
-        Debug.Log("Top cover is open");
+        //Debug.Log("Top cover is open");
     }
     
     public void CloseTopCover() {
         isTopCoverOpen = false;
         tarAlpha = 0.0f;
-        Debug.Log("Top cover is closed");
+        //Debug.Log("Top cover is closed");
     }
     
     public void ToggleTopCover() {
@@ -36,7 +36,7 @@ public class TopCoverCtrl : MonoBehaviour
         //}
         
         if (!curAlpha.Equal(tarAlpha,0.001f)) {
-            curAlpha.ApproachRef(tarAlpha, 32f);
+            curAlpha.ApproachRef(tarAlpha, 64f);
             spriteRenderer.color = spriteRenderer.color.SetAlpha(curAlpha);
         }
         

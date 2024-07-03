@@ -7,18 +7,9 @@
     <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InGameParticleManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/GridTemplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +224,8 @@
       <workItem from="1719904355572" duration="7409000" />
       <workItem from="1719916348451" duration="2770000" />
       <workItem from="1719928045496" duration="3117000" />
-      <workItem from="1719969422541" duration="4348000" />
+      <workItem from="1719969422541" duration="5195000" />
+      <workItem from="1719988819041" duration="731000" />
     </task>
     <servers />
   </component>

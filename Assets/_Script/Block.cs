@@ -11,7 +11,10 @@ public class Block : MonoBehaviour {
     public BlockType type;
     public SpriteRenderer spriteRenderer;
     public bool isTemplate;
+    public bool isPlayer;
     public Color color;
+
+    public Vector2Int oldPos;
     /// <summary>
     /// 逻辑位置
     /// </summary>
@@ -42,6 +45,19 @@ public class Block : MonoBehaviour {
         gameObject.SetActive(false);
     }
     protected void Update() {
+        if(pos != oldPos) {
+            var tagColor = MapCtrl.mapCtrl.ColorTags[pos.x, pos.y];
+            if (tagColor == color) {
+                if (isPlayer) {
+                    /*play player sound*/
+                }
+                else {
+                    /*play box sound*/
+                }
+            }
+            oldPos = pos;
+        }
+        
         if(!isTemplate) spriteRenderer.color = 
             spriteRenderer.color.ApproachValue(color, 16f);
     }
