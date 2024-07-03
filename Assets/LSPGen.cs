@@ -14,7 +14,7 @@ public class LSPGen : MonoBehaviour
     }
     private void Update() {
         timer++;
-        if (timer % 30 == 0) {
+        if (timer % 40 == 0) {
             GenerateParticle();
         }
     }
