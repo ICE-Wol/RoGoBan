@@ -169,8 +169,10 @@ public class MapCtrl : MonoBehaviour {
         }
     }
     
+    
     public void SetBlocksFromHistory() {
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKey(KeyCode.Z)) {
+            
             if (HistoryList.Count == 0) {
                 print("No History!");
                 return;

@@ -384,17 +384,18 @@ public class PlayerCtrl : Block {
         if (isMoving) {
             transform.position = transform.position.ApproachValue
                 (tarPos, 6f * Vector3.one, 0.05f);
-            if(transform.position.Equal(tarPos,0.05f)) {
-                moveEndTime = Time.time;
-                Debug.Log(moveStartTime + " " + moveEndTime + "\n" + 
-                          (moveEndTime - moveStartTime));
-            }
+            // if(transform.position.Equal(tarPos,0.05f)) {
+            //     moveEndTime = Time.time;
+            //     Debug.Log(moveStartTime + " " + moveEndTime + "\n" + 
+            //               (moveEndTime - moveStartTime));
+            // }
         }
         else {
             if (actionList.Count > 0) {
                 if (Time.time - actionList[0].Item2 <= tolerateTime) {
                     Move(actionList[0].Item1);
                     curDir = actionList[0].Item1;
+                    //Debug.Log(Time.time - moveStartTime);
                     moveStartTime = Time.time;
                     
                     

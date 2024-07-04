@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
@@ -52,7 +53,7 @@ public class LevelSelectCtrl : MonoBehaviour
         
         isLevelGenerated = true;
     }
-
+    
     public void SetCurLevelSetIndex()
     {
         if (isOnTitle) {
@@ -80,14 +81,29 @@ public class LevelSelectCtrl : MonoBehaviour
         if (!isOnTitle) {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 curLevelIndex--;
-                if (curLevelIndex < 0)
+                if (curLevelIndex < 0) {
+                    curLevelSetIndex--;
+                    if (curLevelSetIndex < 0)
+                        curLevelSetIndex = levelSets.Length - 1;
+                    for (int i = 0; i < levelTags.Length; i++)
+                        Destroy(levelTags[i].gameObject);
+                    isLevelGenerated = false;
                     curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 curLevelIndex++;
-                if (curLevelIndex >= levelSets[curLevelSetIndex].LevelNum)
+                if (curLevelIndex >= levelSets[curLevelSetIndex].LevelNum) {
+                    curLevelSetIndex++;
+                    if (curLevelSetIndex >= levelSets.Length)
+                        curLevelSetIndex = 0;
+                    for (int i = 0; i < levelTags.Length; i++)
+                        Destroy(levelTags[i].gameObject);
+                    isLevelGenerated = false;
                     curLevelIndex = 0;
+                }
+                
             }
 
             if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.UpArrow)) {

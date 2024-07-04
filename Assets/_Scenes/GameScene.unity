@@ -2261,6 +2261,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThreeCircleTransition 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1946845034720464440, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946845034720464440, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -564210143
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596799146913957403, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596799146913957403, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596799146913957403, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596799146913957403, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037812440263800951, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230587555059197897, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_Name
+      value: BottomColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230587555059197897, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5268035101328235920, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2300,6 +2336,10 @@ PrefabInstance:
     - target: {fileID: 5268035101328235920, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847109669159568328, guid: 264ff0776010b0d48a154aa566aa896d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
