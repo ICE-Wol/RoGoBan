@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/VerticalSans Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LSPGen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LSPGen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelSelectParticle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelSelectParticle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ThreeCircleTransist.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +220,7 @@
       <workItem from="1719928045496" duration="3117000" />
       <workItem from="1719969422541" duration="5195000" />
       <workItem from="1719988819041" duration="6757000" />
-      <workItem from="1720055088621" duration="7891000" />
+      <workItem from="1720055088621" duration="8339000" />
     </task>
     <servers />
   </component>
