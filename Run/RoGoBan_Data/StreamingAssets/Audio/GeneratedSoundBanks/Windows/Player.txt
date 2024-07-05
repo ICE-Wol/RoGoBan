@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1408377607	Player_Cannotmove			\Default Work Unit\Player_Events\Player_Cannotmove	
+	1568219090	Player_Leave			\Default Work Unit\Player_Events\Player_Leave	
+	1802791965	Player_Enter			\Default Work Unit\Player_Events\Player_Enter	
+	2248092158	Player_Move			\Default Work Unit\Player_Events\Player_Move	
+	3087630176	Player_Fuckwall			\Default Work Unit\Player_Events\Player_Fuckwall	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2166979	dong2	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\撞墙和推不进去\dong2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Blocked\dong2		88344
+	72864420	Fuck_Wall	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\dong5_2DCDF0E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Fuck_Wall		74236
+	167850285	dong1	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\撞墙和推不进去\dong1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Blocked\dong1		88344
+	199043872	zii2	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\可以UI可以脚步\zii2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Move\zii2		37944
+	352370401	Player_Enter	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\玩家到达指定位置_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Enter		92280
+	453135353	玩家离开指定位置	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\玩家离开指定位置_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_leave\玩家离开指定位置		82832
+	727070231	dong3	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\撞墙和推不进去\dong3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Blocked\dong3		53064
+	741781689	zii1	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\可以UI可以脚步\zii1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Move\zii1		37944
+	994413819	玩家离开指定位置2	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\玩家离开指定位置2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_leave\玩家离开指定位置2		85980
+

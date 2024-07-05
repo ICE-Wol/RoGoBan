@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1073466678	Stop_BGM			\Default Work Unit\BGM\Stop_BGM	
+	2557777556	Main_Theme			\Default Work Unit\BGM\Main_Theme	
+	2881402637	Stop_Main_Theme			\Default Work Unit\BGM\Stop_Main_Theme	
+	3171315375	Play_Transfer			\Default Work Unit\BGM\Play_Transfer	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	12619323	Main_Theme	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\Main_Theme_8ED3D788.wem		\Actor-Mixer Hierarchy\Default Work Unit\BGM\Main_Theme		16938784
+	618684263	Transfer	E:\Unity\Projects\Unity\RoGoBan-main6\Assets\Wwise\Wwise Project\Wwise Project\.cache\Windows\SFX\Transfer_80CF4CC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\BGM\Transfer		46841988
+

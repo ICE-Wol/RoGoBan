@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1069431850" Type="User" Language="SFX" Hash="{81348F27-53A8-BEAC-4A57-1B505BA4DBFE}">
+			<ShortName>Player</ShortName>
+			<Path>Player.bnk</Path>
+			<Media>
+				<File Id="2166979" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>撞墙和推不进去\dong2.wav</ShortName>
+					<CachePath>SFX/撞墙和推不进去/dong2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="72864420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dong5.wav</ShortName>
+					<CachePath>SFX/dong5_2DCDF0E8.wem</CachePath>
+				</File>
+				<File Id="167850285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>撞墙和推不进去\dong1.wav</ShortName>
+					<CachePath>SFX/撞墙和推不进去/dong1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="199043872" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>可以UI可以脚步\zii2.wav</ShortName>
+					<CachePath>SFX/可以UI可以脚步/zii2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="352370401" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>玩家到达指定位置.wav</ShortName>
+					<CachePath>SFX/玩家到达指定位置_818F3B66.wem</CachePath>
+				</File>
+				<File Id="453135353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>玩家离开指定位置.wav</ShortName>
+					<CachePath>SFX/玩家离开指定位置_818F3B66.wem</CachePath>
+				</File>
+				<File Id="727070231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>撞墙和推不进去\dong3.wav</ShortName>
+					<CachePath>SFX/撞墙和推不进去/dong3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="741781689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>可以UI可以脚步\zii1.wav</ShortName>
+					<CachePath>SFX/可以UI可以脚步/zii1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="994413819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>玩家离开指定位置2.wav</ShortName>
+					<CachePath>SFX/玩家离开指定位置2_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1408377607" Name="Player_Cannotmove" DurationType="OneShot" DurationMin="0.3" DurationMax="0.5">
+					<MediaRefs>
+						<MediaRef Id="2166979"/>
+						<MediaRef Id="167850285"/>
+						<MediaRef Id="727070231"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1802791965" Name="Player_Enter" DurationType="OneShot" DurationMin="0.52231294" DurationMax="0.52231294">
+					<MediaRefs>
+						<MediaRef Id="352370401"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3087630176" Name="Player_Fuckwall" DurationType="OneShot" DurationMin="0.42002288" DurationMax="0.42002288">
+					<MediaRefs>
+						<MediaRef Id="72864420"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1568219090" Name="Player_Leave" DurationType="OneShot" DurationMin="0.46875283" DurationMax="0.48659864">
+					<MediaRefs>
+						<MediaRef Id="453135353"/>
+						<MediaRef Id="994413819"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2248092158" Name="Player_Move" DurationType="OneShot" DurationMin="0.19068645" DurationMax="0.24080561">
+					<MediaRefs>
+						<MediaRef Id="199043872"/>
+						<MediaRef Id="741781689"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AB9F0343-CD85-AB9E-58D8-B63D74A50185}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+			</GameParameters>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{81415FC5-7337-027A-F281-42A82438ACDF}">
+			<ShortName>UI</ShortName>
+			<Path>UI.bnk</Path>
+			<Media>
+				<File Id="207247791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>选项切换.wav</ShortName>
+					<CachePath>SFX/选项切换_818F3B66.wem</CachePath>
+				</File>
+				<File Id="286262923" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enter1.wav</ShortName>
+					<CachePath>SFX/Enter1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="554909792" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>confirm.wav</ShortName>
+					<CachePath>SFX/confirm_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2832330782" Name="Choose" DurationType="OneShot" DurationMin="1.589297" DurationMax="1.589297">
+					<MediaRefs>
+						<MediaRef Id="554909792"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4117021394" Name="Enter_Game" DurationType="OneShot" DurationMin="2.1009524" DurationMax="2.1009524">
+					<MediaRefs>
+						<MediaRef Id="286262923"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3011204530" Name="Move" DurationType="OneShot" DurationMin="0.20417234" DurationMax="0.20417234">
+					<MediaRefs>
+						<MediaRef Id="207247791"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2376466361" Type="User" Language="SFX" Hash="{E9EC9D09-705C-BCCB-86FA-46EFCC6E0707}">
+			<ShortName>Other</ShortName>
+			<Path>Other.bnk</Path>
+			<Media>
+				<File Id="212191083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mix1.wav</ShortName>
+					<CachePath>SFX/mix1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="566826851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>方块到达指定位置.wav</ShortName>
+					<CachePath>SFX/方块到达指定位置_818F3B66.wem</CachePath>
+				</File>
+				<File Id="902245058" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>方块离开指定位置.wav</ShortName>
+					<CachePath>SFX/方块离开指定位置_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="646571441" Name="Cube_Enter" DurationType="OneShot" DurationMin="0.47321996" DurationMax="0.47321996">
+					<MediaRefs>
+						<MediaRef Id="566826851"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2254939478" Name="Cube_leave" DurationType="OneShot" DurationMin="0.46875283" DurationMax="0.46875283">
+					<MediaRefs>
+						<MediaRef Id="902245058"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2386042077" Name="Cube_Mix" DurationType="OneShot" DurationMin="0.25446713" DurationMax="0.25446713">
+					<MediaRefs>
+						<MediaRef Id="212191083"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{2355CD39-927A-D182-DC3A-E5B92C266BF1}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="12619323" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Theme.wav</ShortName>
+					<CachePath>SFX/Main_Theme_8ED3D788.wem</CachePath>
+				</File>
+				<File Id="618684263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Transfer.wav</ShortName>
+					<CachePath>SFX/Transfer_80CF4CC3.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2557777556" Name="Main_Theme" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="12619323"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3171315375" Name="Play_Transfer" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="618684263"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1073466678" Name="Stop_BGM" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2881402637" Name="Stop_Main_Theme" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{72966B85-DE58-5A48-E418-AAFF7DC84B54}</FileHash>
+</SoundBanksInfo>

@@ -208,6 +208,8 @@ public class LevelSelectCtrl : MonoBehaviour
                                 8f);
                         //PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
                         GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
+                        //临时，按钮点击音效，临时让manager代播
+                        WwiseSoundManager.Instance.PostEvent(WwiseSoundManager.Instance.gameObject, WwiseEventType.UI_Click);
                         print(GetTotLevelIndex());
                         //SceneManager.LoadScene(2);
                         //intoLevelTransition.SetActive(true);
