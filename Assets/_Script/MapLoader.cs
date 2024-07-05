@@ -35,6 +35,9 @@ public class MapLoader : MonoBehaviour {
     public ColorHintCtrl colorHintCtrl;
     
     public HintCtrl hintCtrl;
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
+    private bool isCurLevelCompeteHandled = false; //bool确保每次通关只处理一次
 
     void Start() {
         if (isPlayMode) {
@@ -107,14 +110,28 @@ public class MapLoader : MonoBehaviour {
         return true;
     }
 
-    private void Update() {
-        if (isPlayMode) {
-            if (CheckLevelComplete()) {
+    private void Update()
+    {
+        if (isPlayMode)
+        {
+            if (CheckLevelComplete())
+            {//播放过关音效
+                if (!isCurLevelCompeteHandled)
+                {
+                    isCurLevelCompeteHandled = true;
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Level_Complete);
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.PAUSE);
+
+                }
                 topCoverCtrl.OpenTopCover();
                 StartCoroutine(bannerCtrl.ShowBanner());
                 colorHintCtrl.isShowingHint = false;
                 hintCtrl.SetHintIndex(-1);
-                if (Input.anyKeyDown) {
+                
+                if (Input.anyKeyDown)
+                {//播放过关音效2
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.LOAD);
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.RESUME);
                     LoadNextLevel();
                     StartCoroutine(bannerCtrl.HideBanner());
                     topCoverCtrl.CloseTopCover();
@@ -123,7 +140,9 @@ public class MapLoader : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.P))
                 LoadPrevLevel();
-            if (Input.GetKeyDown(KeyCode.R)) {
+            if (Input.GetKeyDown(KeyCode.R))
+            {//播放R音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.R);
                 map.MemGrids();
                 map.SetBlocksFromInitHistory();
             }

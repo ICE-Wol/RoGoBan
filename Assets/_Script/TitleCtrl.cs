@@ -29,7 +29,8 @@ public class TitleCtrl : MonoBehaviour
 
         StartCoroutine(ShowBanner());
     }
-
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
     private void Update() {
         for (int i = 0; i < chars.Length; i++) {
             charTargetPos[i] = new Vector3(i * charInterval, Mathf.Sin(Time.time + i), 0);
@@ -61,7 +62,8 @@ public class TitleCtrl : MonoBehaviour
     }
 
     public IEnumerator HideBanner()
-    {
+    {//播放Title音效
+        wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Title_Enter);
         isBannerShowed = false;
         for (int i = 0; i < chars.Length; i++) {
             isFollowing[i] = false;

@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="" />
+    <list default="true" id="e02e7c58-beee-4db6-b9d6-8ee15a794ac3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RoGoBan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/ThreeCircleTransition.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LevelSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/ColorHintCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/ColorHintCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/EditModeCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/LevelSelectCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/MapLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/PlayerCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/TitleCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Wwise/WwiseSoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Wwise/WwiseSoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Script/Wwise/WwiseSoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Wwise/WwiseSoundManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,15 +37,28 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/115020c87b4d466480ac50278aa0bdef1ed600/5f/1f295fde/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/PillarCtrl.cs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/SceneTransitionCtrl.cs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThreeCircleTransist.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/LevelSelectParticle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/Block.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/ColorHintCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/EditModeCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/LevelSelectCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/MapCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/MapLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/PlayerCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/ThreeCircleTransist.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/TitleCtrl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBan (2)/Assets/_Script/Wwise/WwiseSoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Scenes/TitleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Scenes/TitleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Script/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Script/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/LCBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/PKBannerCtrl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Project/RoGoBan/Assets/_Sprites/Banner/BottomBannerBlur.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Tests/Editor/UGUI/EventSystem/EventTriggerRemoveDuringExecution.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RoGoBanWithAudio/Assets/_Script/LevelSelectCtrl.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -60,6 +94,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;E:/Unity/Project/RoGoBan (2)/Assets&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -220,7 +255,11 @@
       <workItem from="1719928045496" duration="3117000" />
       <workItem from="1719969422541" duration="5195000" />
       <workItem from="1719988819041" duration="6757000" />
-      <workItem from="1720055088621" duration="8339000" />
+      <workItem from="1720055088621" duration="13984000" />
+      <workItem from="1720091280298" duration="2536000" />
+      <workItem from="1720140751088" duration="609000" />
+      <workItem from="1720162840376" duration="2521000" />
+      <workItem from="1720165470711" duration="1092000" />
     </task>
     <servers />
   </component>

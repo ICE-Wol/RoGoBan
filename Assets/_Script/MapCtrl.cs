@@ -59,7 +59,8 @@ public class MapCtrl : MonoBehaviour {
     
     
     public List<(Block[,],Color[,])> HistoryList;
-
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
     private void InitGrids() {
         // (1) 场景、prefab、gameobject里没有挂载对象
         // 用数据生成出来
@@ -171,7 +172,13 @@ public class MapCtrl : MonoBehaviour {
     
     
     public void SetBlocksFromHistory() {
-        if (Input.GetKey(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {//播放Z音效
+            if (HistoryList.Count != 0)
+            {
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Z);
+               
+            }
             
             if (HistoryList.Count == 0) {
                 print("No History!");
@@ -208,7 +215,6 @@ public class MapCtrl : MonoBehaviour {
                     }
                 }
             }
-            
         }
     }
 

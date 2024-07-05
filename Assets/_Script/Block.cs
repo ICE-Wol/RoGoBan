@@ -30,6 +30,7 @@ public class Block : MonoBehaviour {
         if(type != BlockType.Empty) 
             blockList.Add(this);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        oldPos = pos;
     }
 
     public void SetColor(Color c) {
@@ -45,25 +46,49 @@ public class Block : MonoBehaviour {
         // 禁用游戏对象
         gameObject.SetActive(false);
     }
-    protected void Update() {
-        if(pos != oldPos) {
+    protected void Update()
+    {
+        if (pos != oldPos)
+        {
             var tagColor = MapCtrl.mapCtrl.ColorTags[pos.x, pos.y];
-            if (tagColor == color) {
-                if (isPlayer) {
+            if (tagColor == color)
+            {
+                if (isPlayer)
+                {
                     /*play player sound*/
+                    //玩家音效
+                    WwiseSoundManager.Instance.PostEvent(gameObject, WwiseEventType.Player_Enter);
+
                 }
-                else {
+                else
+                {
                     /*play box sound*/
+                    //BOX音效
+                    Debug.Log("播放box in");
+                    WwiseSoundManager.Instance.PostEvent(gameObject, WwiseEventType.Cube_Enter);
+                }
+            }
+            var oldPosColor = MapCtrl.mapCtrl.ColorTags[oldPos.x, oldPos.y];
+            if (oldPosColor == color)
+            {
+                if (isPlayer)
+                {
+                    WwiseSoundManager.Instance.PostEvent(gameObject, WwiseEventType.Player_Leave);
+                }
+                else
+                {
+                    WwiseSoundManager.Instance.PostEvent(gameObject, WwiseEventType.Cube_Leave);
                 }
             }
             oldPos = pos;
         }
-        
-        if(!isTemplate) spriteRenderer.color = 
+
+        if (!isTemplate) spriteRenderer.color =
             spriteRenderer.color.ApproachValue(color, 16f);
     }
 
-    protected void OnDestroy() {
+    protected void OnDestroy()
+    {
         blockList.Remove(this);
     }
 }

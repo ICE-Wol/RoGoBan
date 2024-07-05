@@ -27,13 +27,19 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Application.targetFrameRate = 120;
     }
-
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0)){/**/}
+        if(Input.GetMouseButton(0))
+        {/**///播放Mouse音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Mouse);
+        }
         if (Input.GetKeyDown(KeyCode.Escape)) {
             var i = SceneManager.GetActiveScene().buildIndex;
+            //播放ESC音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Esc);
             if (i != 0) {
                 if (i == 1) {
                     tr = Instantiate(trTemplate);

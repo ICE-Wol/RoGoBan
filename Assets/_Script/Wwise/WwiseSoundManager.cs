@@ -8,10 +8,33 @@ public enum WwiseEventType
     Player_CannotMove,
     Player_FuckWall,
     UI_Click,
+    UI_Choose,
+    UI_Mouse,
+    UI_Esc,
     BGM_Start,
     BGM_Stop,
     IngameBGM_Start,
-    IngameBGM_Stop
+    IngameBGM_Stop,
+    UI_UP,
+    UI_Down,
+    Title_Enter,
+    R,
+    Z,
+    H,
+    Level_Complete,
+    Cube_Enter,
+    Cube_Mix,
+    Cube_Trans,
+    Cube_Leave,
+    Player_Enter,
+    Player_Leave,
+    Enter_Nomouse,
+    LC,
+    FUCKSTOP,
+    BURST,
+    LOAD,
+    PAUSE,
+    RESUME
 }
 [Serializable]
 public struct WwiseEventTypeStruct
@@ -29,7 +52,7 @@ public class WwiseSoundManager : MonoBehaviour
     }
     private void Awake()
     {
-        //¾­µäµ¥Àı
+        //ç»å…¸å•ä¾‹
         if (instance == null)
         {
             instance = this;
@@ -41,23 +64,26 @@ public class WwiseSoundManager : MonoBehaviour
             return;
         }
         foreach (var item in WwiseEventTypeStructs)
-            WwiseEventTypeDictionary.Add(item.Type, item.Event);
-        //¿ªÊ¼²¥BGM
-        PostEvent(gameObject, WwiseEventType.BGM_Start);
+        {
+
+            WwiseEventTypeDictionary[item.Type] = item.Event;
+        }
+
     }
     private void Start()
     {
+        PostEvent(gameObject, WwiseEventType.BGM_Start);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     /// <summary>
-    /// ÔÚ±à¼­Æ÷ÖĞÅäÖÃ
+    /// åœ¨ç¼–è¾‘å™¨ä¸­é…ç½®
     /// </summary>
     public List<WwiseEventTypeStruct> WwiseEventTypeStructs;
 
     private Dictionary<WwiseEventType, AK.Wwise.Event> WwiseEventTypeDictionary = new Dictionary<WwiseEventType, AK.Wwise.Event>();
     /// <summary>
-    /// ·¢³öÄ³¸öWwiseÊÂ¼ş
+    /// å‘å‡ºæŸä¸ªWwiseäº‹ä»¶
     /// </summary>
     /// <param name="gameObject"></param>
     /// <param name="eventType"></param>
@@ -70,7 +96,7 @@ public class WwiseSoundManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// Í£Ö¹Ä³¸öWwiseÊÂ¼ş
+    /// åœæ­¢æŸä¸ªWwiseäº‹ä»¶
     /// </summary>
     /// <param name="gameObject"></param>
     /// <param name="eventType"></param>
@@ -85,16 +111,19 @@ public class WwiseSoundManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-        if (arg0.name.ToLower().Contains("game")){
-            PostEvent(gameObject, WwiseEventType.BGM_Stop);
-        }
-        if (arg0.name.ToLower().Contains("level"))
+        if (arg0.name.ToLower().Contains("game"))
         {
-            PostEvent(gameObject, WwiseEventType.IngameBGM_Stop);
+            //æ¸¸æˆå…³å¡å†…
+            PostEvent(gameObject, WwiseEventType.BGM_Stop);
+            PostEvent(gameObject, WwiseEventType.IngameBGM_Start);
         }
-        //   PostEvent(gameObject, WwiseEventType.BGM_Start);
+        else
+        { //ä¸»ç•Œé¢åŠé€‰å…³
+            PostEvent(gameObject, WwiseEventType.IngameBGM_Stop);
+            PostEvent(gameObject, WwiseEventType.BGM_Start);
+        }
     }
 
-    
+
 
 }

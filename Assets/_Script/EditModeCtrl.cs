@@ -5,6 +5,8 @@ namespace _Script {
     public class EditModeCtrl : MonoBehaviour {
         public bool isEditMode;
         public GameObject editModePanel;
+        public GameObject levelName;
+        public GameObject hintPanel;
         public TMPro.TMP_Text editModeText;
         
         public BlockType curEditBlock;
@@ -57,8 +59,12 @@ namespace _Script {
                 //editModePanel.SetActive(isEditMode);
                 editModePanel.transform.localPosition = isEditMode ? Vector3.zero : new Vector3(-20f, 0, 0);
                 if (isEditMode) {
+                    levelName.SetActive(false);
+                    hintPanel.SetActive(false);
                     Camera.main.transform.position = new Vector3(0, 0, -10);
                 } else {
+                    levelName.SetActive(true);
+                    hintPanel.SetActive(true);
                     int x = MapCtrl.mapCtrl.mapSize.x;
                     int y = MapCtrl.mapCtrl.mapSize.y;
                     Camera.main.transform.position

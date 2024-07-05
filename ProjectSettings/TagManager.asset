@@ -47,6 +47,9 @@ TagManager:
   - name: Player
     uniqueID: 4202882979
     locked: 0
+  - name: UpDeco
+    uniqueID: 2003440585
+    locked: 0
   - name: UI
     uniqueID: 2965615637
     locked: 0

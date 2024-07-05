@@ -158,7 +158,8 @@ public class PlayerCtrl : Block {
                 MergeSecondBoxToFirst(pos2, pos1, col1, col2);
                 PushLineOfBoxes(dir, i);
                 MovePlayer(targetPos);
-
+                //播放颜色融合音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Cube_Mix);
                 return true;
             }
             
@@ -173,7 +174,8 @@ public class PlayerCtrl : Block {
                 MergeSecondBoxToFirst(pos2, pos1, col1, col2);
                 PushLineOfBoxes(dir, i);
                 MovePlayer(targetPos);
-
+                //播放颜色融合音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Cube_Mix);
                 return true;
             }
 
@@ -191,7 +193,8 @@ public class PlayerCtrl : Block {
 
                 box2.SetColor(Color.white);
                 box1.SetColor(colorRemain);
-
+                //播放颜色转换音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Cube_Trans);
                 //保留退回语句以保证每一次操作都至多只发生一次操作
                 return true;
             }
@@ -204,6 +207,8 @@ public class PlayerCtrl : Block {
                 MapCtrl.mapCtrl.GetObjectFromGrid(pos2).SetColor(Color.gray);
                 PushLineOfBoxes(dir, i);
                 MovePlayer(targetPos);
+                //播放玩家融合音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Cube_Mix);
                 return true;
             }
             
@@ -236,7 +241,8 @@ public class PlayerCtrl : Block {
                 
                 PushLineOfBoxes(dir, i + 1);
                 MovePlayer(targetPos);
-                
+                //播放玩家融合音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Cube_Mix);
                 return true;
             }
             
@@ -263,7 +269,8 @@ public class PlayerCtrl : Block {
                 box2.gameObject.SetActive(false);
                 MapCtrl.mapCtrl.SetObjectToGrid(pos1, null);
                 MapCtrl.mapCtrl.SetObjectToGrid(pos2, null);
-                
+                //播放BURST
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.BURST);
                 PushLineOfBoxes(dir, i);
                 if(box1.type == BlockType.Player || box2.type == BlockType.Player) {
                     return true;

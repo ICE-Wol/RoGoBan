@@ -17,9 +17,12 @@ public class ColorHintCtrl : MonoBehaviour
             finalPos[i] = circles[i].transform.position;
         }
     }
-    
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.H)) {
+        if (Input.GetKeyDown(KeyCode.H))
+        {//播放H音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.H);
             isShowingHint = !isShowingHint;
         }
         

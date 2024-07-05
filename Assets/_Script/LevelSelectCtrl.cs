@@ -53,7 +53,9 @@ public class LevelSelectCtrl : MonoBehaviour
         
         isLevelGenerated = true;
     }
-    
+    //加入Wwise
+    private WwiseSoundManager wwiseSoundManager_Instance => WwiseSoundManager.Instance;
+
     public void SetCurLevelSetIndex()
     {
         if (isOnTitle) {
@@ -63,7 +65,8 @@ public class LevelSelectCtrl : MonoBehaviour
                     curLevelSetIndex = levelSets.Length - 1;
                 for (int i = 0; i < levelTags.Length; i++)
                     Destroy(levelTags[i].gameObject);
-                isLevelGenerated = false;
+                isLevelGenerated = false;//播放移动音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Choose);
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.D)) {
                 curLevelSetIndex++;
@@ -71,7 +74,8 @@ public class LevelSelectCtrl : MonoBehaviour
                     curLevelSetIndex = 0;
                 for (int i = 0; i < levelTags.Length; i++)
                     Destroy(levelTags[i].gameObject);
-                isLevelGenerated = false;
+                isLevelGenerated = false;//播放移动音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Choose);
             }
         }
 
@@ -82,6 +86,7 @@ public class LevelSelectCtrl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 curLevelIndex--;
                 if (curLevelIndex < 0) {
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Choose);
                     curLevelSetIndex--;
                     if (curLevelSetIndex < 0)
                         curLevelSetIndex = levelSets.Length - 1;
@@ -90,6 +95,7 @@ public class LevelSelectCtrl : MonoBehaviour
                     isLevelGenerated = false;
                     curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
                 }
+                
             }
 
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -102,27 +108,32 @@ public class LevelSelectCtrl : MonoBehaviour
                         Destroy(levelTags[i].gameObject);
                     isLevelGenerated = false;
                     curLevelIndex = 0;
+                    wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Choose);
                 }
                 
             }
 
             if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.UpArrow)) {
                 if (curLevelIndex - numPerRow >= 0)
-                    curLevelIndex -= numPerRow;
+                    curLevelIndex -= numPerRow; //播放移动音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_UP);
             }
 
             if (Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.DownArrow)) {
                 if (curLevelIndex + numPerRow < levelSets[curLevelSetIndex].LevelNum)
-                    curLevelIndex += numPerRow;
+                    curLevelIndex += numPerRow; //播放移动音效
+                wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Down);
             }
         }
 
         if (curLevelIndex < 6 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))) {
-            isOnTitle = true;
+            isOnTitle = true;//播放移动音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_UP);
         } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             isOnTitle = false;
             if(curLevelIndex >= levelSets[curLevelSetIndex].LevelNum)
-                curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;
+                curLevelIndex = levelSets[curLevelSetIndex].LevelNum - 1;//播放移动音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.UI_Down);
         }
 
         if (isOnTitle) {
@@ -147,7 +158,8 @@ public class LevelSelectCtrl : MonoBehaviour
 
     public void EnterLevel() {
         if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
-        {
+        {//播放Enter音效
+            wwiseSoundManager_Instance.PostEvent(gameObject, WwiseEventType.Enter_Nomouse);
             GameManager.Manager.levelSelectedIndex = GetTotLevelIndex();
             //PlayerPrefs.SetInt("LevelIndex", GetTotLevelIndex());
             //SceneManager.LoadScene(2);
